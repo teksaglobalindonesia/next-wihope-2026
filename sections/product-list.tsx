@@ -8,18 +8,27 @@ import { Product } from "@/types/product";
 export default function ProductListSection() {
     const [products, setProducts] = useState<Product[]>([]);
     const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await fetch("https://fakestoreapi.com/products");
-
-            if(!response.ok) {
-                throw new Error("Failed to fetch data dari API");
+            try {
+                setIsLoading(true);
+                const response = await fetch("https://fakestoreapi.com/products");
+                
+                if (!response.ok) {
+                throw new Error("Failed to fetch data");
+                }
+                
+                const result = await response.json();
+                setProducts(result);
+                setFilteredProducts(result);
+            } catch (error) {
+                // eslint-disable-next-line no-console
+                console.error("Error fetching data:", error);
+            } finally {
+                setIsLoading(false);
             }
-
-            const result = await response.json();
-            setProducts(result);
-            setFilteredProducts(result);
         }
 
         fetchProducts();
@@ -61,15 +70,31 @@ export default function ProductListSection() {
     return (
         <>
             <SearchFilter onFilterChange={handleSearchAndSort} />
-            {filteredProducts.length === 0 ? (
-                <p className="text-slate-500 font-bold text-xl w-fit mx-auto my-6">Produk tidak ditemukan 🥲</p>
-            ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-fit mx-auto p-4">
-                    {filteredProducts.map((product) => (
-                        <Card key={product.id} product={product} />
-                    ))}
-                </div>
-            )}
+
+            {
+                // Loading process
+                isLoading ? (
+                    <div className="flex justify-center items-center my-12">
+                        <p className="text-blue-600 font-bold text-lg animate-pulse">Memuat Produk...</p>
+                    </div>
+                ) :
+
+                // Checks if filtered products is empty
+                filteredProducts.length === 0 ? (
+                    <div className="flex justify-center items-center my-12">
+                        <p className="text-blue-600 font-bold text-lg animate-pulse">Produk tidak ditemukan... 😐</p>
+                    </div>
+                ) : 
+
+                // Main content
+                (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-fit mx-auto p-4">
+                        {filteredProducts.map((product) => (
+                            <Card key={product.id} product={product} />
+                        ))}
+                    </div>
+                )
+            }
         </>
     )
 }

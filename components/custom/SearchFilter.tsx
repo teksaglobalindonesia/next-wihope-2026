@@ -60,7 +60,7 @@ export default function SearchFilter({ onFilterChange }: SearchFilterProps) {
 
                         <button 
                             className="flex justify-center gap-2 bg-white border border-green-500 shadow-md text-lg py-2 px-3 rounded-lg text-slate-500 font-semibold transition duration-200 hover:ring-1 hover:ring-green-500 hover:text-slate-800 hover:border-green-600"
-                            onClick={() => onFilterChange(query, filterType, "asc")}>
+                            onClick={() => onFilterChange(query, filterType, "desc")}>
                             Sort 
                             <svg xmlns="http://www.w3.org/2000/svg" className="size-6" viewBox="0 0 24 24">
                                 <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h9m-9 6h7m-7 6h7m4-3l3 3l3-3m-3-9v12"></path>
