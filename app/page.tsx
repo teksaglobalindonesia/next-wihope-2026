@@ -1,7 +1,7 @@
 import ProductListSection from "./sections/product-list";
 
 async function getProducts() {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch("https://next-wihope-2026-git-widhi-test-teksa-digitals-projects.vercel.app/products.json");
   return res.json();
 }
 
