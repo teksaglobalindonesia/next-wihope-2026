@@ -9,10 +9,8 @@ export default async function Page() {
   const products = await getProducts();
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Teksa Digital</h1>
-
+    <main className="p-6">
       <ProductListSection products={products} />
-    </div>
+    </main>
   );
 }
