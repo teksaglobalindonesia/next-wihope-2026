@@ -1,3 +1,8 @@
 export default function Page() {
-  return <p>Hello from Endra</p>;
+  return (
+    <>
+      <p>Hello</p>
+      <p>Hello dari endra sigma</p>
+    </>
+  );
 }
