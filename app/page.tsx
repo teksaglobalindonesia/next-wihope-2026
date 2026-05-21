@@ -1,23 +1,27 @@
-import ProductList from "@/sections/product-list";
+import ProductList from '@/sections/product-list';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 async function getProducts() {
-    try {
-    const response = await fetch("https://fakestoreapi.com/products", {
-      cache: "no-store",
+  try {
+    const response = await fetch('https://fakestoreapi.com/products', {
+      cache: 'no-store'
     });
 
-        if(!response.ok) {
-            throw new Error("Failed to fetch data dari API");
-        }
+    const response2 = await fetch('https://jsonplaceholder.typicode.com/todos/1', {
+      cache: 'no-store'
+    });
+    console.log('Response 2:', response2);
 
-        return response.json();
-
-    } catch (error) {
-        console.log(error);
-    return [];
+    if (!response.ok) {
+      throw new Error('Failed to fetch data dari API');
     }
+
+    return response.json();
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
 }
 
 export default async function Page() {
@@ -25,7 +29,7 @@ export default async function Page() {
 
   return (
     <>
-      <div className="bg-slate-100 min-h-screen">
+      <div className="min-h-screen bg-slate-100">
         <ProductList products={products} />
       </div>
     </>
