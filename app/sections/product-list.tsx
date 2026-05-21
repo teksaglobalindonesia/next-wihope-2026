@@ -21,9 +21,13 @@ export default function ProductListSection({
   products: Product[];
 }) {
   const [searchTitle, setSearchTitle] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
   const [filterType, setFilterType] = useState('title');
+
+  useEffect(() => {
+  setFilteredProducts(products);
+}, [products]);
 
   function sortASC() {
     const sorted = [...filteredProducts].sort((a, b) => a.price - b.price);
