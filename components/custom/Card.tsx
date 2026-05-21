@@ -1,4 +1,5 @@
 import { Product } from "@/types/product"
+import Image from "next/image";
 
 type CardProps = {
     product: Product;
@@ -9,10 +10,12 @@ export default function Card({ product }: CardProps) {
         <>
             <div className="flex flex-col bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden group">
                 <div className="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center p-3 overflow-hidden">
-                    <img 
+                    <Image 
                     className="max-h-[85%] max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300" 
                     src={product.image} 
-                    alt={product.title}/>
+                    alt={product.title}
+                    width={300}
+                    height={300}/>
                 </div>
 
                 <div className="flex flex-col flex-1 p-4 gap-2.5">

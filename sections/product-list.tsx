@@ -1,16 +1,29 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "@/components/custom/Card";
 import SearchFilter from "@/components/custom/SearchFilter";
 import { Product } from "@/types/product";
 
-type ProductListProps = {
-    products: Product[];
-}
+export default function ProductListSection() {
+    const [products, setProducts] = useState<Product[]>([]);
+    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
-export default function ProductListSection({ products }: ProductListProps) {
-    const [filteredProducts, setFilteredProducts] = useState(products);
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const response = await fetch("https://fakestoreapi.com/products");
+
+            if(!response.ok) {
+                throw new Error("Failed to fetch data dari API");
+            }
+
+            const result = await response.json();
+            setProducts(result);
+            setFilteredProducts(result);
+        }
+
+        fetchProducts();
+    }, []);
 
     const handleSearchAndSort = (currentQuery: string, currentFilter: string, sortType: "asc" | "desc" | null) => {
         let filterResult = [...products];
