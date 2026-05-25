@@ -1,3 +1,8 @@
+import Header from "@/components/custom/header";
+
 export default function Page() {
-  return <p>Hello world!</p>;
+  return(
+    <Header />
+  ) ;
+    
 }
