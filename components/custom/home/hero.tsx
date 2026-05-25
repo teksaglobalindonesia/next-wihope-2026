@@ -22,7 +22,7 @@ export default function Hero() {
 
                 <div>
                     <Image
-                        src="/illustrations/illustration-1.png"
+                        src="/illustrations/illustration-2.png" 
                         width={391}
                         height={407}
                         alt="Illustration"
