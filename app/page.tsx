@@ -1,3 +1,11 @@
+import Header from "@/components/custom/Header";
+import Hero from "@/components/custom/Hero";
+
 export default function Page() {
-  return <p>Hello world!</p>;
+  return (
+    <>
+      <Header/>
+      <Hero/>
+    </>
+  )
 }
