@@ -6,7 +6,7 @@ export default function UnseenSpending() {
             <div className="flex justify-between items-center px-[144px] w-full">
                 <div className="flex items-center justify-center">
                     <Image
-                        src="/illustrations/illustration-2.png"
+                        src="/illustrations/mobile-login-illustration.png"
                         width={442}
                         height={329}
                         alt="Illustration"
