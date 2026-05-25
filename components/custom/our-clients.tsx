@@ -3,7 +3,7 @@ export default function OurClients() {
         <div className="w-full h-[190px] px-[144px] gap-[16px] mt-10">
             <div className="w-[1,110px] h-[76px] gap-[8px]">
                 <h1 className="flex flex-col items-center font-inter font-semibold text-[36px] leading-[44px] text-neutral-d-grey">Our Clients</h1> 
-                <p className="flex flex-col items-center font-inter text-[16px] leading-[24px text-neutral-grey] mt-2">We have been working with some Fortune 500+ clients</p>
+                <p className="flex flex-col items-center font-inter text-[16px] leading-[24px] text-[#717171] mt-2">We have been working with some Fortune 500+ clients</p>
             </div>
             <div className="flex flex-row justify-between mt-12">
                 <img src="/client-logo/Logo (1).png" alt="Client logo 1" />

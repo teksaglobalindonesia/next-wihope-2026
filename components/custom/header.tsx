@@ -2,7 +2,7 @@ import { CustButton } from './CustButton';
 
 export default function Header() {
   return (
-    <div className="flex h-[84px] w-full flex-row justify-between bg-neutral-d-grey px-8">
+    <div className="flex h-[84px] w-full flex-row justify-between bg-[#F5F7FA] px-8">
       <div className="ml-[30px] mt-[25px] flex h-[24px] w-[154.49px] flex-row items-center gap-[8px]">
         <img
           src="/image/Icon.png"
@@ -15,7 +15,7 @@ export default function Header() {
       </div>
 
       <div className="ml-[80px] mt-[30px] flex h-[24px] w-[588px] flex-row items-center gap-[50px]">
-        <p className="h-[24px] w-[46px] gap-[10px] font-inter text-[16px] text-gray-900">
+        <p className="h-[24px] w-[46px] gap-[10px] font-inter text-[16px] text-gray-900 font-medium">
           Home
         </p>
         <p className="h-[24px] w-[57px] gap-[10px] font-inter text-[16px] text-gray-900">
