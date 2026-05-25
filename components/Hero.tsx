@@ -18,11 +18,11 @@ export default function Hero() {
   };
 
   return (
-    <div className="mt-[84px] flex h-[599px] w-full justify-center bg-neutral-silver">
+    <div className="mt-[84px] flex h-[599px] justify-center bg-neutral-silver">
       <div className="flex h-full w-[1152px] items-center justify-between">
         <div className="flex flex-col gap-[32px]">
           <div className="flex h-[152px] flex-col">
-            <div className="font-inter text-[64px] font-semibold leading-[76px] tracking-[0px]">
+            <div className="font-inter text-[64px] font-semibold leading-[76px]">
               <h1 className='text-neutral-d_grey'>Lessons and insights</h1>
               <h1 className='text-brand-primary'>from 8 years</h1>
             </div>

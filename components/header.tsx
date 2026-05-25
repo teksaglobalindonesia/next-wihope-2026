@@ -6,7 +6,7 @@ import NavLink from './NavLink';
 import Button from './Button';
 
 const NAV_LINKS = [
-  { name: 'home', label: 'Home', href: '/' },
+  { name: 'home', label: 'Home', href: '/home' },
   { name: 'service', label: 'Service', href: '/service' },
   { name: 'feature', label: 'Feature', href: '/feature' },
   { name: 'product', label: 'Product', href: '/product' },
