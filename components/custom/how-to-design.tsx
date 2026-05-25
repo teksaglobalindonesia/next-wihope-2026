@@ -6,7 +6,7 @@ export default function HowToDesign() {
             <div className="flex flex-row items-center">
                 <img src="/image/pana.png" alt="image" />
                     
-                    <div className="flex flex-col w-[661px] gap-5  mr-[144]">
+                    <div className="flex flex-col w-[661px] gap-5 mr-[144]">
                         <div className="mr-[60px] ">
                             <h1 className="font-inter font-semibold text-3xl text-[#4D4D4D] text-start w-[601x]">How to design your site footer like we did</h1>
                             <p className="font-inter mt-4 text-sm text-[#717171]">Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor, augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque elit erat a magna. Donec quis erat at libero ultrices mollis. In hac habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi facilisis finibus. In euismod augue vitae nisi ultricies, non aliquet urna tincidunt. Integer in nisi eget nulla commodo faucibus efficitur quis massa. Praesent felis est, finibus et nisi ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id gravida.</p>
