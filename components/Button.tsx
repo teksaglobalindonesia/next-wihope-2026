@@ -41,7 +41,7 @@ const variantStyles = {
 function LoadingIcon({ className }: { className?: string }) {
   return (
     <svg
-      className={className}
+      className={`${className} animate-spin`}
       width="16"
       height="16"
       viewBox="0 0 16 16"

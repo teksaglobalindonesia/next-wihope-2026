@@ -23,8 +23,8 @@ export default function Hero() {
         <div className="flex flex-col gap-[32px]">
           <div className="flex h-[152px] flex-col">
             <div className="font-inter text-[64px] font-semibold leading-[76px]">
-              <h1 className='text-neutral-d_grey'>Lessons and insights</h1>
-              <h1 className='text-brand-primary'>from 8 years</h1>
+              <p className='text-neutral-d_grey'>Lessons and insights</p>
+              <p className='text-brand-primary'>from 8 years</p>
             </div>
           </div>
           <p className='text-[16px] font-inter text-neutral-grey'>
