@@ -61,7 +61,40 @@ module.exports = {
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
-        }
+        },
+        neutral: {
+          black: 'var(--black)',
+          'd-grey': 'var(--d-grey)',
+          grey: 'var(--grey)',
+          'l-grey': 'var(--l-grey)',
+          'grey-blue': 'var(--grey-blue)',
+          silver: 'var(--silver)',
+          white: 'var(--white)',
+        },
+        primary: {
+          'brand-primary': 'var(--brand-primary)',
+          'brand-secondary': 'var(--brand-secondary)',
+          'brand-info': 'var(--brand-info)',
+        },
+        shade: {
+          'shade-1': 'var(--shade-1)',
+          'shade-2': 'var(--shade-2)',
+          'shade-3': 'var(--shade-3)',
+          'shade-4': 'var(--shade-4)',
+          'shade-5': 'var(--shade-5)',
+        },
+        tint: {
+          'tint-1': 'var(--tint-1)',
+          'tint-2': 'var(--tint-2)',
+          'tint-3': 'var(--tint-3)',
+          'tint-4': 'var(--tint-4)',
+          'tint-5': 'var(--tint-5)',
+        },
+        action: {
+          warning: 'var(--warning)',
+          error: 'var(--error)',
+          success: 'var(--success)',
+        },
       },
       fontSize: {
         '2xs': ['10px', '16px']
@@ -73,6 +106,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: 'var(--font-roboto), sans-serif',
+        inter: 'var(--font-inter), sans-serif'
       },
       keyframes: {
         'accordion-down': {
