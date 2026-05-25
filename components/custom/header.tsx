@@ -1,9 +1,8 @@
-import Image from 'next/image';
 export default function Header() {
   return (
     <header className="bg-neutral-silver w-full shadow-md">
       <div className="flex h-[84px] flex-row items-center px-[144px]">
-        <Image src="/logo.svg" alt="logo" width={154} height={24} />
+        <img alt="logo" src="/logo.svg" width={154} height={24} />
         <nav className="flex h-[24px] flex-1 items-center justify-center gap-[50px] text-[16px] font-normal leading-[24px] text-gray-900">
           <a
             href="#"
