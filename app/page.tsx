@@ -1,4 +1,10 @@
 import Header from '../components/header';
+import Hero from '../components/Hero'
 export default function Page() {
-  return <Header />;
+  return (
+    <div>
+      <Header />
+      <Hero />
+    </div>
+  );
 }
