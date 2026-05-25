@@ -2,7 +2,7 @@ import { Toaster } from '@/components/ui/sonner';
 import { Roboto, Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import './globals.css';
-import "animate.css/animate.compat.css";
+import 'animate.css/animate.compat.css';
 import { ReactQueryClientProvider } from '@/providers/ReactQueryClientProvider';
 
 const robotoFont = Roboto({
