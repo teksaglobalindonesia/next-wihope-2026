@@ -6,7 +6,7 @@ export default function Community(){
                 <p className="mt-2">Who is Nextcent suitable for?</p>
             </div>
             
-            <div className="flex flex-row justify-between items-center text-center gap-2 px-8 mt-8">
+            <div className="flex flex-row justify-between items-center text-center gap-2 px-8 mt-6">
                 <div className="flex flex-col w-[299px] h-[260px] items-center">
                     <img className="w-[65px] h-[56px]" src="/comunity-logo/Icon member.png" alt="member1" />
                    <h1 className="font-inter font-bold text-xl text-neutral-d-grey"> Membership Organisations </h1>
