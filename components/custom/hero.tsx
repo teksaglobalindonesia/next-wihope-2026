@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-1 justify-center items-center">
-        <img alt="hero image" src="/illustration.svg" width={391} height={407} />
+        <img alt="hero" src="/Illustration.svg" width={400} height={400} />
       </div>
 
     </section>
