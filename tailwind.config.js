@@ -18,12 +18,44 @@ module.exports = {
       }
     },
     extend: {
+      fontFamily: {
+        roboto: 'var(--font-roboto), sans-serif',
+        inter: 'var(--font-inter), sans-serif'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
+        'brand-primary': 'var(--brand-primary)',
+        'neutral-black': 'var(--neutral-black)',
+        'neutral-d-grey': 'var(--neutral-d-grey)',
+        'neutral-grey': 'var(--neutral-grey)',
+        'neutral-l-grey': 'var(--neutral-l-grey)',
+        'neutral-grey-blue': 'var(--neutral-grey-blue)',
+        'neutral-silver': 'var(--neutral-silver)',
+        'neutral-white': 'var(--neutral-white)',
+
+        'brand-primary': 'var(--brand-primary)',
+        'brand-secondary': 'var(--brand-secondary)',
+        'brand-info': 'var(--brand-info)',
+
+        'shade-1': 'var(--shade-1)',
+        'shade-2': 'var(--shade-2)',
+        'shade-3': 'var(--shade-3)',
+        'shade-4': 'var(--shade-4)',
+        'shade-5': 'var(--shade-5)',
+
+        'tint-1': 'var(--tint-1)',
+        'tint-2': 'var(--tint-2)',
+        'tint-3': 'var(--tint-3)',
+        'tint-4': 'var(--tint-4)',
+        'tint-5': 'var(--tint-5)',
+
+        warning: 'var(--warning)',
+        error: 'var(--error)',
+        success: 'var(--success)',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
@@ -72,7 +104,7 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)'
       },
       fontFamily: {
-        roboto: 'var(--font-roboto), sans-serif',
+        roboto: 'var(--font-roboto), sans-serif'
       },
       keyframes: {
         'accordion-down': {
