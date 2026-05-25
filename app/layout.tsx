@@ -12,9 +12,9 @@ const robotoFont = Roboto({
 });
 
 const interFont = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter'
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter'
 });
 
 export default async function RootLayout({
