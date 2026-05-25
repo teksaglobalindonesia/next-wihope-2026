@@ -13,13 +13,13 @@ import { ReactQueryClientProvider } from '@/providers/ReactQueryClientProvider';
 
 const robotoFont = Roboto({
   subsets: ['latin'],
-  weight: ['300', '500', '700'],
+  weight: ['300', '400', '500', '700'],
   variable: '--font-roboto'
 });
 
 const interFont = Inter({
   subsets: ['latin'],
-  weight: ['300', '500', '700'],
+  weight: ['300', '400', '500', '700'],
   variable: '--font-inter'
 });
 
