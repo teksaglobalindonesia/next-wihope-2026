@@ -61,8 +61,43 @@ module.exports = {
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
-        }
+        },
+        brand:{
+          primary: 'var(--brand-primary)',
+          secondary: 'var(--brand-secondary)',
+          info: 'var(--brand-info)'
+        },
+        neutral:{
+          black: 'var(--neutral-black)',
+          'd-grey': 'var(--neutral-d-grey)',
+          grey: 'var(--neutral-grey)',
+          'l-grey': 'var(--neutral-l-grey)',
+          'grey-blue': 'var(--neutral-grey-blue)',
+          silver: 'var(--neutral-silver)',
+          white: 'var(--neutral-white)',
+        },
+        shade:{
+          1: 'var(--shade-1)',
+          2: 'var(--shade-2)',
+          3: 'var(--shade-3)',
+          4: 'var(--shade-4)',
+          5: 'var(--shade-5)',
+        },
+        tint:{
+          1: 'var(--tint-1)',
+          2: 'var(--tint-2)',
+          3: 'var(--tint-3)',
+          4: 'var(--tint-4)',
+          5: 'var(--tint-5)',
+        },
+        action:{
+          warning: 'var(--action-warning)',
+          succes: 'var(--action-succes)',
+          info: 'var(--action-info)',
+        },
       },
+
+
       fontSize: {
         '2xs': ['10px', '16px']
       },
@@ -73,6 +108,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: 'var(--font-roboto), sans-serif',
+        inter: 'var(--font-inter), sans-serif'
       },
       keyframes: {
         'accordion-down': {
