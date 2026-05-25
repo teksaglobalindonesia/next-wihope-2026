@@ -34,7 +34,7 @@ export default function Header() {
 
   return (
     <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-center bg-neutral-silver">
-      <div className="flex w-[1200px] justify-between">
+      <div className="flex w-[1215px] justify-between">
         <div className="flex items-center justify-center gap-[8px]">
           <img className="h-[24px] w-[35px]" src="/logo.png" alt="logo" />
           <p className="text-[28px] font-semibold text-brand-secondary">
