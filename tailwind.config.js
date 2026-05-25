@@ -60,7 +60,30 @@ module.exports = {
           accent: 'hsl(var(--sidebar-accent))',
           'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
           border: 'hsl(var(--sidebar-border))',
-          ring: 'hsl(var(--sidebar-ring))'
+          ring: 'hsl(var(--sidebar-ring))',
+          'neutral-black': 'var(--neutral-black)',
+          'neutral-d_grey': 'var(--neutral-d_grey)',
+          'neutral-grey': 'var(--neutral-grey)',
+          'neutral-l_grey': 'var(--neutral-l_grey)',
+          'neutral-blue-grey': 'var(--neutral-blue-grey)',
+          'neutral-silver': 'var(--neutral-silver)',
+          'neutral-white': 'var(--neutral-white)',
+          'brand-primary': 'var(--brand-primary)',
+          'brand-secondary': 'var(--brand-secondary)',
+          'brand-info': 'var(--brand-info)',
+          'shade-shade_1': 'var(--shade-shade_1)',
+          'shade-shade_2': 'var(--shade-shade_2)',
+          'shade-shade_3': 'var(--shade-shade_3)',
+          'shade-shade_4': 'var(--shade-shade_4)',
+          'shade-shade_5': 'var(--shade-shade_5)',
+          'tint-tint_1': 'var(--tint-tint_1)',
+          'tint-tint_2': 'var(--tint-tint_2)',
+          'tint-tint_3': 'var(--tint-tint_3)',
+          'tint-tint_4': 'var(--tint-tint_4)',
+          'tint-tint_5': 'var(--tint-tint_5)',
+          'action-warning': 'var(--action-warning)',
+          'action-error': 'var(--action-error)',
+          'action-success': 'var(--tint-action-success)',
         }
       },
       fontSize: {
@@ -73,6 +96,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: 'var(--font-roboto), sans-serif',
+        inter: 'var(--font-inter), sans-serif'
       },
       keyframes: {
         'accordion-down': {
