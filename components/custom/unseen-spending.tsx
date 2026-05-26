@@ -18,7 +18,7 @@ export default function UnseenSpending() {
     <div className="mt-[76px] flex h-[529px] w-full justify-center bg-white py-[48px] gap-[56px]">
       <div className="">
         <Image
-          src="/Illustration-2.png"
+          src="/Illustration/Illustration-2.png"
           width={442}
           height={329}
           quality={100}

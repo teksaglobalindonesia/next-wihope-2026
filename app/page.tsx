@@ -4,6 +4,7 @@ import Client from '@/components/custom/our-client';
 import Community from '@/components/custom/community';
 import UnseenSpending from '@/components/custom/unseen-spending';
 import Achievement from '@/components/custom/achievement';
+import HowToDesign from '@/components/custom/how-to-design';
 
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <Community/>
       <UnseenSpending/>
       <Achievement />
+      <HowToDesign/>
     </>
   );
 }
