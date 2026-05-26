@@ -21,6 +21,7 @@ export default function Button({
       text-white
       font-medium
       font-inter
+      hover:bg-shade-shade_2
     `,
 
     Secondary: `
@@ -34,7 +35,7 @@ export default function Button({
 
     Tertiary: `
       text-brand-primary
-      hover:bg-neutral-silver
+      hover:bg-white
       font-medium
       font-inter
     `

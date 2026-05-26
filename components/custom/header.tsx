@@ -26,7 +26,7 @@ export default function Header() {
   };
 
   return (
-    <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-between bg-neutral-silver px-[101px]">
+    <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-between bg-neutral-silver px-[50px]">
       <div className="flex items-center gap-[8px]">
         <img src="/Icon.png" alt="Logo" className="h-[24px] w-[35px]" />
         <p className="text-[28px] font-semibold text-brand-secondary">
