@@ -38,6 +38,9 @@ const CustButton = React.forwardRef<HTMLButtonElement, CustButtonProps>(
     ref
   ) => {
     const Comp = asChild ? Slot : 'button';
+
+    const iconSizeClass = size === 'small' ? 'size-3' : size === 'medium' ? 'size-4' : 'size-5';
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
@@ -45,11 +48,29 @@ const CustButton = React.forwardRef<HTMLButtonElement, CustButtonProps>(
         {...props}
       >
         {iconPosition === 'left' && (
-          <div className="rounded-full p-2 ">+</div>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth={2.5} 
+            stroke="currentColor" 
+            className={iconSizeClass}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
         )}  
         {children}
         {iconPosition === 'right' && (
-          <div className="rounded-full p-2">R</div>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth={2.5} 
+            stroke="currentColor" 
+            className={iconSizeClass}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          </svg>
         )}
       </Comp>
     );
