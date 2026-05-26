@@ -39,7 +39,7 @@ const CustButton = React.forwardRef<HTMLButtonElement, CustButtonProps>(
   ) => {
     const Comp = asChild ? Slot : 'button';
 
-    const iconSizeClass = size === 'small' ? 'size-3' : size === 'medium' ? 'size-4' : 'size-5';
+    const iconSizeClass = size === 'normal' ? 'size-3' : size === 'medium' ? 'size-4' : 'size-5';
 
     return (
       <Comp
