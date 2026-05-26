@@ -2,6 +2,7 @@ import Header from '../components/header';
 import Hero from '../components/Hero';
 import OurClient from '@/components/OurClient';
 import Community from '@/components/Community';
+import UnseenSpending from '@/components/UnseenSpending';
 export default function Page() {
   return (
     <div>
@@ -10,6 +11,9 @@ export default function Page() {
         <Hero />
         <OurClient />
         <Community />
+      </div>
+      <div className='flex flex-col mt-[42px]'>
+      <UnseenSpending />
       </div>
     </div>
   );
