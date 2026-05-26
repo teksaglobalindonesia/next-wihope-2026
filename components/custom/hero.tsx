@@ -36,7 +36,7 @@ export default function Hero() {
       </div>
       <div>
         <img
-          src="/Illustration.png"
+          src="../Illustration/Illustration-1.png"
           alt="Illustration"
           className="h-[407px] w-[391px]"
         />

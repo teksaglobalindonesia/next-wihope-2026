@@ -50,11 +50,11 @@ export default function Button({
   };
 
   const loadingImages = {
-    Primary: '/Loading_putih.png',
+    Primary: '../Loading-images/Loading_putih.png',
 
-    Secondary: '/Loading_hijau.png',
+    Secondary: '../Loading-images/Loading_hijau.png',
 
-    Tertiary: '/Loading_hijau.png'
+    Tertiary: '../Loading-images/Loading_hijau.png'
   };
 
   return (

@@ -2,13 +2,13 @@ import Image from 'next/image';
 
 export default function Client() {
   const Logo = [
-    '/Logo(1).png',
-    '/Logo (2).png',
-    '/Logo (3).png',
-    '/Logo (4).png',
-    '/Logo (5).png',
-    '/Logo (6).png',
-    '/Logo (7).png'
+    '/Logo-images/Logo (1).png',
+    '/Logo-images/Logo (2).png',
+    '/Logo-images/Logo (3).png',
+    '/Logo-images/Logo (4).png',
+    '/Logo-images/Logo (5).png',
+    '/Logo-images/Logo (6).png',
+    '/Logo-images/Logo (7).png'
   ];
   return (
     <div className="py-[40px] h-[270] w-full bg-white">
@@ -22,8 +22,8 @@ export default function Client() {
           </p>
         </div>
         <div className="flex gap-[96px] py-[41px] px-[50px] ">
-          {Logo.map((png) => (
-            <div className="">
+          {Logo.map((png, id) => (
+            <div key={id} className="">
               <Image
                 src={`${png}`}
                 alt=""

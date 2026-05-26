@@ -16,7 +16,7 @@ import communityData from '@/lib/community-data';
             {communityData.map((data, id) => (
             <div
                 key={id}
-                className="h-[260px] w-[299px]  bg-white shadow-[0px_2px_4px_0px_#ABBED133] py-[24px] flex flex-col items-center px-[28px] hover:scale-[1.05] hover:shadow-lg transition-all ease-in-out duration-500"
+                className="h-[284px] w-[299px]  bg-white shadow-[0px_2px_4px_0px_#ABBED133] rounded-[8px] py-[24px] flex flex-col items-center px-[28px] hover:scale-[1.05] hover:shadow-lg transition-all ease-in-out duration-500 "
             >
                 <div className=" w-[81px] h-[41px] flex justify-center relative">
                 <div className="rounded-bl-[5px] rounded-br-[10px] rounded-tl-[18px] rounded-tr-[5px] bg-tint-tint_5 w-[50px] h-[49px] rotate-180">

@@ -15,7 +15,7 @@ export default function UnseenSpending() {
     }, 2000);
   };
   return (
-    <div className="mt-[52px] flex h-[529px] w-full justify-center bg-white py-[48px]">
+    <div className="mt-[76px] flex h-[529px] w-full justify-center bg-white py-[48px] gap-[56px]">
       <div className="">
         <Image
           src="/Illustration-2.png"
