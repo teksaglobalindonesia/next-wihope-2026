@@ -13,9 +13,7 @@ import Ribbon from "@/components/custom/home/ribbon";
 export default function Page() {
   return (
     <>
-      <header>
-        <Header/>
-      </header>
+      <Header/>
 
       <div className="flex flex-col gap-10 mb-[112px]">
         <Hero/>
@@ -28,11 +26,7 @@ export default function Page() {
       </div>
 
       <Ribbon/>
-
-      <footer>
-        <Footer/>
-      </footer>
-      
+      <Footer/>
     </>
   )
 }

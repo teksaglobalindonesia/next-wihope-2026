@@ -23,20 +23,19 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${robotoFont.variable} ${interFont.variable}`}
-      suppressHydrationWarning={true}
-    >
-      <body className={interFont.className}>
-        <ReactQueryClientProvider>
-          <NextTopLoader showSpinner={false} height={4} />
-          <Toaster />
-          <main>
+    <ReactQueryClientProvider>
+      <html
+        lang="en"
+        className={`${robotoFont.variable} ${interFont.variable}`}
+        suppressHydrationWarning={true}
+      >
+        <body className={interFont.className}>
+          
+            <NextTopLoader showSpinner={false} height={4} />
+            <Toaster />
             {children}
-          </main>
-        </ReactQueryClientProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ReactQueryClientProvider>
   );
 }

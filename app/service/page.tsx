@@ -7,9 +7,7 @@ import SimpleHero from "@/components/custom/service/simple-hero";
 export default function Page() {
     return (
         <>
-            <header>
-                <Header/>
-            </header>
+            <Header/>
 
             <div className="flex flex-col gap-10">
                 <SimpleHero/>
@@ -17,9 +15,7 @@ export default function Page() {
                 <Quote/>
             </div>
 
-            <footer>
-                <Footer/>
-            </footer>
+            <Footer/>
         </>
     )
 }
