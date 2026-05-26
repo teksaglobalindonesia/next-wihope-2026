@@ -35,7 +35,7 @@ export default function Button({
 
     Tertiary: `
       text-brand-primary
-      hover:bg-white
+      hover:bg-neutral-sliver
       font-medium
       font-inter
     `
