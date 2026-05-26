@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Blogs } from "@/lib/data-dummy"
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function NewMarketing() {
     return (
@@ -32,7 +32,7 @@ export default function NewMarketing() {
                             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 z-10 flex flex-col justify-center items-center text-center bg-neutral-white gap-4 p-4 rounded-[8px] shadow-[0px_8px_16px_0px_#ABBED166] w-[317px]">
                                 <span className="text-neutral-grey text-xl font-semibold">{blog.title}</span>
                                 <Button className="text-brand-primary text-xl font-semibold" variant="standardTertiary" size="clear" asChild>
-                                    <Link href={blog.href}>Read More <ArrowRightIcon/></Link>
+                                    <Link href={blog.href}>Read More <ArrowRight/></Link>
                                 </Button>
                             </div>
                         </div>
