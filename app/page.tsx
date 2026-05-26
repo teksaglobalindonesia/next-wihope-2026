@@ -2,6 +2,7 @@ import Header from '../components/custom/header';
 import Hero from '@/components/custom/hero';
 import Client from '@/components/custom/our-client';
 import Community from '@/components/custom/community';
+import UnseenSpending from '@/components/custom/unseen-spending';
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
       <Hero />
       <Client />
       <Community/>
+      <UnseenSpending/>
     </>
   );
 }

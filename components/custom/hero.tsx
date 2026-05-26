@@ -27,9 +27,9 @@ export default function Hero() {
         <Button
           variant="Primary"
           className="mt-[32px] h-[52px] w-[128px] rounded-[4px]"
-          loading={loadingButton === 'sign up'}
-          disabled={loadingButton !== null && loadingButton !== 'sign up'}
-          onClick={() => handleButtonClick('sign up')}
+          loading={loadingButton === 'register'}
+          disabled={loadingButton !== null && loadingButton !== 'register'}
+          onClick={() => handleButtonClick('register')}
         >
           Register
         </Button>
