@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ClientIcons } from "@/lib/data-dummy"
 
 export default function OurClients() {
     return (
@@ -10,48 +11,16 @@ export default function OurClients() {
                 </div>
 
                 <div className="flex justify-between items-center w-[1152px] h-[98px]">
-                    <Image 
-                        src="/logos/logo-1.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-2.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-3.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-4.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-5.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-6.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
-                    <Image 
-                        src="/logos/logo-7.png"
-                        width={48}
-                        height={48}
-                        alt="Client Logo"
-                    />
+                    { ClientIcons.map((icon) => (
+                        <Image
+                            key={icon.id}
+                            src={icon.src}
+                            width={48}
+                            height={48}
+                            alt={icon.alt}
+                        />
+                    )) }
+                    
                 </div>
             </div>
         </>

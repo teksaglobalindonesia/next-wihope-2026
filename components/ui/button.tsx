@@ -9,25 +9,35 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-primary text-primary-foreground shadow hover:bg-primary/90',
-        destructive:
-          'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
-        outline:
-          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
-        secondary:
-          'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline',
-        black: 'bg-black text-white',
-        paginate: 'bg-white border border-ac-light-8 text-primary-foreground'
+        default:          'bg-primary text-primary-foreground shadow hover:bg-primary/90',
+        destructive:      'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
+        outline:          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
+        secondary:        'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
+        ghost:            'hover:bg-accent hover:text-accent-foreground',
+        link:             'text-primary underline-offset-4 hover:underline',
+        black:            'bg-black text-white',
+        paginate:         'bg-white border border-ac-light-8 text-primary-foreground',
+
+        // Custom
+        navLink:            'text-gray-900 underline-offset-4 hover:underline focus:border focus:border-neutral-l-grey active:text-shade-2 disabled:text-neutral-grey-blue',
+
+        standardPrimary:    'bg-brand-primary text-neutral-white focus:border-2 focus:border-neutral-d-grey active:bg-shade-2 disabled:bg-neutral-silver disabled:text-neutral-grey-blue',
+        standardSecondary:  'bg-brand-secondary text-neutral-white border border-brand-primary hover:bg-neutral-silver focus:bg-neutral-l-grey focus:border-2 focus:border-neutral-l-grey active:bg-neutral-silver disabled:bg-neutral-silver disabled:neutral-grey-blue',
+        standardTertiary:   'bg-transparent text-brand-primary hover:bg-neutral-silver focus:bg-transparent focus:border-2   focus:border-neutral-d-grey active:bg-tint-5 disabled:bg-neutral-silver disabled:text-neutral-grey-blue'
+
       },
       size: {
         default: 'h-9 px-4 py-2',
         sm: 'h-8 rounded-md px-3 text-xs',
         lg: 'h-10 rounded-md px-8',
         icon: 'h-9 w-9',
-        paginate1: 'h-9 px-3'
+        paginate1: 'h-9 px-3',
+
+        // Custom
+        clear:    'h-auto p-0',
+        normal:   'rounded-[4px] px-8 py-4',
+        medium:   'rounded-[4px] px-8 py-[14px]',
+        small:   'rounded-[4px] px-6 py-2'
       }
     },
     defaultVariants: {

@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function UnseenSpending() {
     return (
@@ -13,7 +15,7 @@ export default function UnseenSpending() {
                     />
                 </div>
 
-                <div className="flex flex-col items-start justify-center gap-8 max-w-[661px]">
+                <div className="flex flex-col items-start justify-center gap-8 w-[661px]">
                     <div className="flex flex-col items-start gap-4">
                         <span className="text-neutral-d-grey text-[36px] leading-[44px] font-semibold">The unseen of spending three years at Pixelgrade</span>
                         <span className="text-neutral-grey text-sm">
@@ -23,7 +25,9 @@ export default function UnseenSpending() {
                         </span>
                     </div>
 
-                    <button className="bg-brand-primary text-neutral-white rounded-[4px] py-[14px] px-8">Learn More</button>
+                    <Button className="" variant="standardPrimary" size="medium" asChild>
+                        <Link href="/register">Learn More</Link>
+                   </Button>
                 </div>
             </div>
         </>

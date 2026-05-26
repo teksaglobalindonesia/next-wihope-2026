@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Achievements } from "@/lib/data-dummy"
 
 export default function Achievement() {
     return (
@@ -13,66 +14,24 @@ export default function Achievement() {
                     <span className="text-[#18191F]">We reached here with our hard work and dedication</span>
                 </div>
 
-                <div className="flex flex-col gap-10">
-                    <div className="flex gap-[30px]">
-                        <div className="flex justify-start items-center gap-4 w-[255px]">
+                <div className="grid grid-cols-2 gap-10">
+                    { Achievements.map((achievement) => (
+                        <div key={achievement.id} className="flex justify-start items-center gap-4 w-[255px]">
                             <Image
-                                src="/icons/users.png"
+                                src={achievement.icon}
                                 width={48}
                                 height={48}
                                 alt="Icon"
                             />
 
                             <div className="flex flex-col">
-                                <span className="text-neutral-d-grey text-[28px] leading-[36px] font-bold">2,245,341</span>
-                                <span className="text-neutral-grey">Members</span>
+                                <span className="text-neutral-d-grey text-[28px] leading-[36px] font-bold">{new Intl.NumberFormat('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(achievement.count)}</span>
+                                <span className="text-neutral-grey">{achievement.label}</span>
                             </div>
                         </div>
+                    )) }
+                    
 
-                        <div className="flex justify-start items-center gap-4 w-[255px]">
-                            <Image
-                                src="/icons/three-hands.png"
-                                width={48}
-                                height={48}
-                                alt="Icon"
-                            />
-
-                            <div className="flex flex-col">
-                                <span className="text-neutral-d-grey text-[28px] leading-[36px] font-bold">46,328</span>
-                                <span className="text-neutral-grey">Clubs</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="flex gap-[30px]">
-                        <div className="flex justify-start items-center gap-4 w-[255px]">
-                            <Image
-                                src="/icons/finger-tap.png"
-                                width={48}
-                                height={48}
-                                alt="Icon"
-                            />
-
-                            <div className="flex flex-col">
-                                <span className="text-neutral-d-grey text-[28px] leading-[36px] font-bold">828,867</span>
-                                <span className="text-neutral-grey">Event Bookings</span>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-start items-center gap-4 w-[255px]">
-                            <Image
-                                src="/icons/credit-card.png"
-                                width={48}
-                                height={48}
-                                alt="Icon"
-                            />
-
-                            <div className="flex flex-col">
-                                <span className="text-neutral-d-grey text-[28px] leading-[36px] font-bold">1,926,436</span>
-                                <span className="text-neutral-grey">Payments</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </>

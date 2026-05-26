@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Hero() {
     return (
@@ -15,9 +17,9 @@ export default function Hero() {
                         social media?
                     </span>
 
-                    <button className="rounded-[4px] bg-brand-primary px-8 py-[14px] text-neutral-white">
-                        Register
-                    </button>
+                    <Button className="" variant="standardPrimary" size="medium" asChild>
+                        <Link href="/register">Register</Link>
+                   </Button>
                 </div>
 
                 <div>
