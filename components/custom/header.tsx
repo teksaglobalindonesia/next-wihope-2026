@@ -1,41 +1,44 @@
 export default function Header() {
   return (
-    <header className="bg-neutral-silver w-full shadow-md">
+    <header className="fixed top-0 z-50 bg-neutral-silver w-full ">
+
       <div className="flex h-[84px] flex-row items-center px-[144px]">
+
         <img alt="logo" src="/logo.svg" width={154} height={24} />
+
         <nav className="flex h-[24px] flex-1 items-center justify-center gap-[50px] text-[16px] font-normal leading-[24px] text-gray-900">
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Home
           </a>
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Services
           </a>
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Features
           </a>
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Product
           </a>
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Testimonials
           </a>
           <a
-            href="#"
+            href=""
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             FAQ
