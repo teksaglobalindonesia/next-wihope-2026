@@ -24,7 +24,7 @@ export default function NotFound() {
           Go back
         </Button>
         <Button
-          onClick={() => router.back()}
+          onClick={() => router.push("/")}
           variant="ghost"
           size="lg"
         >
