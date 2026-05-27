@@ -4,6 +4,7 @@ type NavLinkProps = {
   disabled?: boolean;
   onClick?: () => void;
   active?: boolean;
+  variant?: 'Navbar' | 'Footer';
 };
 
 export default function NavLink({
@@ -11,7 +12,8 @@ export default function NavLink({
   children,
   disabled = false,
   onClick,
-  active = false
+  active = false,
+  variant = 'Navbar'
 }: NavLinkProps) {
   return (
     <a
@@ -21,10 +23,10 @@ export default function NavLink({
       className={`
         rounded-[2px]
        
-         ${
+         ${variant === 'Navbar' ?
            active
              ? 'text-black underline decoration-black'
-             : 'text-gray-900 hover:underline hover:decoration-gray-900 focus:outline-none focus:ring-[1px] focus:ring-neutral-l_grey'
+             : 'text-gray-900 hover:underline hover:decoration-gray-900 focus:outline-none focus:ring-[1px] focus:ring-neutral-l_grey' : 'text-neutral-silver hover:underline hover:decoration-neutral-silver focus:outline-none focus:ring-[1px] focus:ring-neutral-l_grey'
          }
 
         hover:underline-offset-2

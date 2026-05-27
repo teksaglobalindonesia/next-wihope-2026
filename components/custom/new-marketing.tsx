@@ -47,7 +47,7 @@ export default function NewMarketing() {
           </p>
           <Button
             variant="Tertiary"
-            className="h-[44px] w-[285px]"
+            className="h-[44px] w-[285px] font-semibold"
             loading={loadingButton === `readmore-${id}`}
             disabled={loadingButton !== null && loadingButton !== `readmore-${id}`}
             onClick={() => handleButtonClick(`readmore-${id}`)}
