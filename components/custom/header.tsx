@@ -1,38 +1,21 @@
 import { CustButton } from './CustButton';
+import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className="flex h-[84px] w-full flex-row justify-between bg-[#F5F7FA] px-8">
+    <div className="sticky top-0 flex h-[84px] w-full flex-row justify-between bg-[#F5F7FA] px-8">
       <div className="ml-[30px] mt-[25px] flex h-[24px] w-[154.49px] flex-row items-center gap-[8px]">
-        <img
-          src="/image/Icon.png"
-          className="ml-105 h-[24px] w-[35px]"
-          alt="Icon"
-        />
-        <h1 className="h-[20.66px] w-[111.49px] pb-8 text-2xl font-bold text-brand-secondary">
-          Nextcent
-        </h1>
+        <img src="/image/Icon.png" className="ml-105 h-[24px] w-[35px]" alt="Icon"/>
+        <h1 className="h-[20.66px] w-[111.49px] pb-8 text-2xl font-bold text-brand-secondary">Nexcent</h1>
       </div>
 
-      <div className="ml-[80px] mt-[30px] flex h-[24px] w-[588px] flex-row items-center gap-[50px]">
-        <p className="h-[24px] w-[46px] gap-[10px] font-inter text-[16px] text-gray-900 font-medium">
-          Home
-        </p>
-        <p className="h-[24px] w-[57px] gap-[10px] font-inter text-[16px] text-gray-900">
-          Service
-        </p>
-        <p className="h-[24px] w-[58px] gap-[10px] font-inter text-[16px] text-gray-900">
-          Feature
-        </p>
-        <p className="h-[24px] w-[60px] gap-[10px] font-inter text-[16px] text-gray-900">
-          Product
-        </p>
-        <p className="h-[24px] w-[86px] gap-[10px] font-inter text-[16px] text-gray-900">
-          Testimonial
-        </p>
-        <p className="h-[24px] w-[31px] gap-[10px] font-inter text-[16px] text-gray-900">
-          FAQ
-        </p>
+      <div className="mt-7 ml-6 flex h-[24px] w-[588px] flex-row items-center gap-8">
+        <Link href="/" passHref legacyBehavior><CustButton variant={'header'}>Home</CustButton></Link>
+        <Link href="/service" passHref legacyBehavior><CustButton variant={'header'}>Service</CustButton></Link>
+        <CustButton variant={'header'}>Feature</CustButton>
+        <CustButton variant={'header'}>Product</CustButton>
+        <CustButton variant={'header'}>Testimonial</CustButton>
+        <CustButton variant={'header'}>FAQ</CustButton>
       </div>
 
       <div className="mr-6 mt-2 flex flex-row gap-2 px-[20px] py-[10px]">

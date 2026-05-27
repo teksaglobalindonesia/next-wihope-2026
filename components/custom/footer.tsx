@@ -1,3 +1,5 @@
+import { CustButton } from "./CustButton";
+
 export default function Footer() {
     return (
         <div className="h-[328px] w-full bg-[#263238] px-[165px] py-16 ">
@@ -10,7 +12,7 @@ export default function Footer() {
                             alt="Icon"
                         />
                         <h1 className="h-[20.66px] w-[111.49px] pb-8 text-2xl font-bold text-white">
-                            Nextcent
+                            Nexcent
                         </h1>
                     </div>
 
@@ -29,20 +31,20 @@ export default function Footer() {
                 <div className="flex flex-row w-[635px] h-[200px] gap-24 text-white font-inter">
                     <div className="flex flex-col text-start gap-4">
                         <h1 className="font-semibold text-xl">Company</h1>
-                        <p>About Us</p>
-                        <p>Blog</p>
-                        <p>contact Us</p>
-                        <p>Pricing</p>
-                        <p>Testimonial</p>
+                        <CustButton variant={'footer'} size={'footer'}>About us</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Blog</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Contact Us</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Pricing</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Testimonial</CustButton>
                     </div>
 
                     <div className="flex flex-col text-start gap-4">
                         <h1 className="font-semibold text-xl">Support</h1>
-                        <p>Help Center</p>
-                        <p>Terms Of Service</p>
-                        <p>Legal</p>
-                        <p>Privacy Policy</p>
-                        <p>Status</p>
+                        <CustButton variant={'footer'} size={'footer'}>Help Center</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Terms of Service</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Legal</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Privacy Policy</CustButton>
+                        <CustButton variant={'footer'} size={'footer'}>Status</CustButton>
                     </div>
                 </div>
             </div> 

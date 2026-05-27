@@ -14,7 +14,6 @@ import { Button } from '@/components/ui/button';
 export default function Page() {
   return (
     <div>
-      <Header />
       <Hero />
       <OurClients />
       <Community />
@@ -23,7 +22,6 @@ export default function Page() {
       <HowToDesign />
       <NewMarketing />
       <Ribbon />
-      <Footer />
     </div>
   );
 }

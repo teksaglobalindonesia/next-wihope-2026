@@ -10,12 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-brand-primary hover:bg-[#2f9d33] hover:scale-105 transition duration-300 ease-in-out hover:underline text-white',
-        secondary:
-          'bg-transparent text-brand-primary border border-[#F5F7FA] hover:border-[#4CAF4F] hover:scale-105 hover:underline transition duration-300 ease-in-out '
+        secondary:'bg-transparent text-brand-primary border border-transparent hover:border-[#4CAF4F] hover:scale-105 hover:underline transition duration-300 ease-in-out ',
+        header:'bg-transparent text-gray-900 hover:scale-105 hover:underline transition duration-300 ease-in-out ',
+        footer:'bg-transparent text-white hover:scale-105 hover:underline transition duration-300 ease-in-out'
       },
       size: {
-        normal: 'h-[50px] w-[135px] text-lg',
-        medium: 'w-[91px] h-[40px] '
+        normal: 'w-[135px] h-[50px] text-lg flex items-center whitespace-nowrap',
+        medium: 'w-[91px] h-[40px] text-sm flex items-center whitespace-nowrap',
+        footer: 'w-[91px] h-[40px] text-sm text-start flex items-center justify-start whitespace-nowrap',
+        long: 'h-[40px] px-4 text-sm flex items-center whitespace-nowrap'
       }
     },
     defaultVariants: {
