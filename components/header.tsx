@@ -6,7 +6,7 @@ import Link from './Link';
 import Button from './Button';
 
 const LINKS = [
-  { name: 'home', label: 'Home', href: '/home' },
+  { name: 'home', label: 'Home', href: '/' },
   { name: 'service', label: 'Service', href: '/service' },
   { name: 'feature', label: 'Feature', href: '/feature' },
   { name: 'product', label: 'Product', href: '/product' },

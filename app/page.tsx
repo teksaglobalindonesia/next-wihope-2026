@@ -1,5 +1,5 @@
 import Header from '../components/header';
-import Hero from '../components/Hero';
+import Hero from '@/components/Hero';
 import OurClient from '@/components/OurClient';
 import Community from '@/components/Community';
 import UnseenSpending from '@/components/UnseenSpending';
