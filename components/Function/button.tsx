@@ -5,6 +5,7 @@ type ButtonProps = {
   onClick?: () => void;
   variant: 'Primary' | 'Secondary' | 'Tertiary';
   className?: string;
+  icon?: React.ReactNode;
 };
 
 export default function Button({
@@ -13,7 +14,8 @@ export default function Button({
   disabled = false,
   onClick,
   variant,
-  className = ""
+  className = "",
+  icon
 }: ButtonProps) {
   const variantStyles = {
     Primary: `
@@ -81,13 +83,13 @@ export default function Button({
     >
       {children}
 
-      {loading && (
+      {loading ? (
         <img
           src={loadingImages[variant]}
           alt="loading"
           className="h-4 w-4 animate-spin"
         />
-      )}
+      ) : (icon)}
  
     </button>
   );
