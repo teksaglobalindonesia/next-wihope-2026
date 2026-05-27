@@ -6,8 +6,8 @@ export default function Community() {
         <>
             <div className="flex flex-col justify-center items-center gap-4 w-full bg-neutral-white">
                 <div className="flex flex-col items-center gap-2 text-center">
-                    <span className="text-neutral-d-grey text-[36px] leading-[44px] font-semibold w-[542px]">Manage your entire community in a single system</span>
-                    <span className="text-neutral-grey">Who is Nextcent suitable for?</span>
+                    <h2 className="text-neutral-d-grey text-[36px] leading-[44px] font-semibold w-[542px]">Manage your entire community in a single system</h2>
+                    <p className="text-neutral-grey">Who is Nextcent suitable for?</p>
                 </div>
 
                 <div className="flex justify-between items-start px-[144px] w-full">
@@ -26,11 +26,11 @@ export default function Community() {
                                         />
                                 </div>
 
-                                <span className="text-[28px] leading-[36px] font-bold text-neutral-d-grey">{community.title}</span>
+                                <h3 className="text-[28px] leading-[36px] font-bold text-neutral-d-grey">{community.title}</h3>
                             </div>
 
                             <div className="flex justify-between items-center">
-                                <span className="text-sm text-neutral-grey">{community.description}</span>
+                                <p className="text-sm text-neutral-grey">{community.description}</p>
                             </div>
                             
                         </div>

@@ -13,14 +13,14 @@ export default function Footer() {
                             alt="Nexcent Logo"
                         />
 
-                        <span className="text-[36px] font-semibold leading-[44px] text-neutral-white">
+                        <h1 className="text-[36px] font-semibold leading-[44px] text-neutral-white">
                             Nexcent
-                        </span>
+                        </h1>
                     </div>
 
                     <div className="flex flex-col items-start">
-                        <span className="text-sm text-neutral-silver">Copyright © 2026 Nexcent ltd.</span>
-                        <span className="text-sm text-neutral-silver">All rights reserved</span>
+                        <p className="text-sm text-neutral-silver">Copyright © 2026 Nexcent ltd.</p>
+                        <p className="text-sm text-neutral-silver">All rights reserved</p>
                     </div>
 
                     <div className="flex items-center justify-start gap-4">
@@ -49,24 +49,24 @@ export default function Footer() {
 
                 <div className="grid grid-cols-3 gap-[30px]">
                     <div className="flex flex-col items-start gap-6 w-[160px]">
-                        <span className="text-neutral-white text-xl font-semibold">Company</span>
+                        <h3 className="text-neutral-white text-xl font-semibold">Company</h3>
                         <div className="flex flex-col items-start gap-3">
-                            <span className="text-sm text-neutral-silver">About us</span>
-                            <span className="text-sm text-neutral-silver">Blog</span>
-                            <span className="text-sm text-neutral-silver">Contact us</span>
-                            <span className="text-sm text-neutral-silver">Pricing</span>
-                            <span className="text-sm text-neutral-silver">Testimonials</span>
+                            <p className="text-sm text-neutral-silver">About us</p>
+                            <p className="text-sm text-neutral-silver">Blog</p>
+                            <p className="text-sm text-neutral-silver">Contact us</p>
+                            <p className="text-sm text-neutral-silver">Pricing</p>
+                            <p className="text-sm text-neutral-silver">Testimonials</p>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-start gap-6 w-[160px]">
-                        <span className="text-neutral-white text-xl font-semibold">Support</span>
+                        <h3 className="text-neutral-white text-xl font-semibold">Support</h3>
                         <div className="flex flex-col items-start gap-3">
-                            <span className="text-sm text-neutral-silver">Help center</span>
-                            <span className="text-sm text-neutral-silver">Terms of service</span>
-                            <span className="text-sm text-neutral-silver">Legal</span>
-                            <span className="text-sm text-neutral-silver">Privacy policy</span>
-                            <span className="text-sm text-neutral-silver">Status</span>
+                            <p className="text-sm text-neutral-silver">Help center</p>
+                            <p className="text-sm text-neutral-silver">Terms of service</p>
+                            <p className="text-sm text-neutral-silver">Legal</p>
+                            <p className="text-sm text-neutral-silver">Privacy policy</p>
+                            <p className="text-sm text-neutral-silver">Status</p>
                         </div>
                     </div>
 

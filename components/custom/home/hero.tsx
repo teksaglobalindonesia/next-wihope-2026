@@ -7,15 +7,15 @@ export default function Hero() {
         <>
             <div className="flex w-full items-center justify-center gap-[104px] bg-neutral-silver px-[144px] py-[96px]">
                 <div className="flex h-[276px] w-[657px] flex-col items-start gap-8">
-                    <span className="text-[64px] font-semibold leading-[76px] text-neutral-d-grey">
+                    <h2 className="text-[64px] font-semibold leading-[76px] text-neutral-d-grey">
                         Lessons and insights
                         <span className="text-brand-primary"> from 8 years</span>
-                    </span>
+                    </h2>
 
-                    <span className="text-neutral-grey">
+                    <p className="text-neutral-grey">
                         Where to grow your business as a photographer: site or
                         social media?
-                    </span>
+                    </p>
 
                     <Button className="" variant="standardPrimary" size="medium" asChild>
                         <Link href="/register">Register</Link>

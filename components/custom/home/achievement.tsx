@@ -6,12 +6,12 @@ export default function Achievement() {
         <>
             <div className="flex items-center justify-between bg-neutral-silver w-full px-[144px] py-[64px]">
                 <div className="flex flex-col items-start gap-2 w-[540px]">
-                    <span className="text-[36px] leading-[44px] font-semibold text-neutral-d-grey w-[408px]">
+                    <h2 className="text-[36px] leading-[44px] font-semibold text-neutral-d-grey w-[408px]">
                         Helping a local 
                         <span className="text-brand-primary"> business reinvent itself</span>
-                    </span>
+                    </h2>
 
-                    <span className="text-[#18191F]">We reached here with our hard work and dedication</span>
+                    <h3 className="text-[#18191F]">We reached here with our hard work and dedication</h3>
                 </div>
 
                 <div className="grid grid-cols-2 gap-10">

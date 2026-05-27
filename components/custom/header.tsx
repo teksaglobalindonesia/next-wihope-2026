@@ -17,9 +17,9 @@ export default function Header() {
                         height={24}
                         alt="Nexcent Logo"
                     />
-                    <span className="text-[28px] font-semibold leading-[36px] text-brand-secondary">
+                    <h1 className="text-[28px] font-semibold leading-[36px] text-brand-secondary">
                         Nexcent
-                    </span>
+                    </h1>
                 </Link>
 
                 <div className="flex items-center gap-[50px]">

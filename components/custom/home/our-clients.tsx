@@ -6,8 +6,8 @@ export default function OurClients() {
         <>
             <div className="flex flex-col justify-center items-center gap-4 w-full">
                 <div className="flex flex-col items-center gap-2">
-                    <span className="text-neutral-d-grey text-[36px] leading-[44px] font-semibold">Our Clients</span>
-                    <span className="text-neutral-grey">We have been working with some Fortune 500+ clients</span>
+                    <h2 className="text-neutral-d-grey text-[36px] leading-[44px] font-semibold">Our Clients</h2>
+                    <p className="text-neutral-grey">We have been working with some Fortune 500+ clients</p>
                 </div>
 
                 <div className="flex justify-between items-center w-[1152px] h-[98px]">
