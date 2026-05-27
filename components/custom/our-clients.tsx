@@ -1,12 +1,12 @@
 export default function Clients() {
   const Logo = [
-    "/Logo (1).svg",
-    "/Logo (2).svg",
-    "/Logo (3).svg",
-    "/Logo (4).svg",
-    "/Logo (5).svg",
-    "/Logo (6).svg",
-    "/Logo (7).svg"
+     "/Logo (14).svg",
+    "/Logo (10).svg",
+    "/Logo (9).svg",
+    "/Logo (11).svg",
+    "/Logo (12).svg",
+    "/Logo (13).svg",
+    "/Logo (9).svg"
   ];
 
   return (
@@ -33,7 +33,7 @@ export default function Clients() {
               src={logo}
               width={48}
               height={48}
-              className="hover:bg-brand-primary hover:scale-[1.025] transition-all duration-200"
+              className=" hover:scale-[1.025] transition-all duration-200"
             />
           ))}
 

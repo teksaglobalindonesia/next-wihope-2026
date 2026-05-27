@@ -25,7 +25,7 @@ export default function NewMarketing() {
           </h2>
 
           <p className="w-[628px] h-[72px] text-center text-[16px] leading-[24px] text-neutral-grey">
-            The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​
+            The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who&apos;s joining the community, read about how our community are increasing their membership income and lot&apos;s more.​
           </p>
         </div>
          </div>
@@ -35,9 +35,9 @@ export default function NewMarketing() {
             {marketing.map((item, index) => (
             <div
               key={index}
-              className="relative flex w-[368px] flex-col items-center"
+              className="relative flex w-[368px] flex-col items-center hover:scale-105 transition-all duration-300"
             >
-              {/* Image */}
+              
               <img
                 src={item.image}
                 alt="marketing image"

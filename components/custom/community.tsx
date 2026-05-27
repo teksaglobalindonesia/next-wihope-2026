@@ -40,11 +40,11 @@ export default function Community() {
           </p>
         </div>
 
-        <div className="flex w-full justify-between px-[144px]">
+        <div className="flex w-full justify-between px-[144px] ">
           {community.map((community, index) => (
             <div
               key={index}
-              className="flex h-[260px] w-[299px] flex-col items-center gap-[8px] rounded-[8px] px-[32px] py-[24px] shadow-[0px_2px_4px_0px_#ABBED133]"
+              className="flex h-[260px] w-[299px] flex-col items-center gap-[8px] rounded-[8px] px-[32px] py-[24px] shadow-[0px_2px_4px_0px_#ABBED133] hover:scale-105 transition-all duration-300"
             >
               <img
                 src={community.image}

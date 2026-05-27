@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Header() {
   return (
     <header className="fixed top-0 z-50 bg-neutral-silver w-full ">
@@ -7,42 +8,42 @@ export default function Header() {
         <img alt="logo" src="/logo.svg" width={154} height={24} />
 
         <nav className="flex h-[24px] flex-1 items-center justify-center gap-[50px] text-[16px] font-normal leading-[24px] text-gray-900">
-          <a
-            href=""
+          <Link
+            href="/"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Home
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/services"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Services
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/features"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Features
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/product"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Product
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/testimonials"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Testimonials
-          </a>
-          <a
-            href=""
+          </Link>
+          <Link
+            href="/faq"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             FAQ
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-[14px]">
