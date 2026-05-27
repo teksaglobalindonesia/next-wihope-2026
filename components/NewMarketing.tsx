@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState, useTransition, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from './Button';
 
@@ -9,13 +9,10 @@ export default function NewMarketing() {
   const [loading, setLoading] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const handleNavClick = (linkName: string, href: string) => {
-    if (isPending) return;
-    setLoading(linkName);
-    startTransition(() => {
-      router.push(href);
-    });
-  };
+  useEffect(() => {
+    if (!isPending && loading !== null) setLoading(null);
+  }, [isPending]);
+
   return (
     <div className="flex h-[506px] justify-center">
       <div className="flex w-[1152px] flex-col items-center bg-neutral-white font-inter">
@@ -44,6 +41,7 @@ export default function NewMarketing() {
                 className="mt-[16px] h-[44px] w-[285px] text-[20px] font-semibold"
                 loadingSize="h-[24px] w-[24px]"
                 loading={loading === 'readmore1'}
+                disabled={isPending && loading !== 'readmore1'}
                 icon={
                   <img
                     className="h-[24px] w-[24px]"
@@ -51,9 +49,14 @@ export default function NewMarketing() {
                     alt="arrow"
                   />
                 }
-                onClick={() => {
+                onClick={async () => {
                   setLoading('readmore1');
-                  startTransition(() => router.push('/test'));
+                  await new Promise<void>((resolve) =>
+                    startTransition(async () => {
+                      await router.push('/test');
+                      resolve();
+                    })
+                  );
                 }}
               >
                 Readmore
@@ -68,13 +71,15 @@ export default function NewMarketing() {
             />
             <div className="absolute bottom-0 left-1/2 flex h-[176px] w-[317px] -translate-x-1/2 flex-col items-center rounded-[8px] bg-neutral-silver py-[16px] shadow-[0px_8px_16px_#ABBED166]">
               <p className="w-[300px] text-center text-[20px] font-semibold leading-[28px] text-neutral-grey">
-                What are your safeguarding responsibilities and how can you manage them?
+                What are your safeguarding responsibilities and how can you
+                manage them?
               </p>
               <Button
                 variant="tertiary"
                 className="mt-[16px] h-[44px] w-[285px] text-[20px] font-semibold"
                 loadingSize="h-[24px] w-[24px]"
                 loading={loading === 'readmore2'}
+                disabled={isPending && loading !== 'readmore2'}
                 icon={
                   <img
                     className="h-[24px] w-[24px]"
@@ -82,9 +87,14 @@ export default function NewMarketing() {
                     alt="arrow"
                   />
                 }
-                onClick={() => {
+                onClick={async () => {
                   setLoading('readmore2');
-                  startTransition(() => router.push('/test'));
+                  await new Promise<void>((resolve) =>
+                    startTransition(async () => {
+                      await router.push('/test');
+                      resolve();
+                    })
+                  );
                 }}
               >
                 Readmore
@@ -106,6 +116,7 @@ export default function NewMarketing() {
                 className="mt-[16px] h-[44px] w-[285px] text-[20px] font-semibold"
                 loadingSize="h-[24px] w-[24px]"
                 loading={loading === 'readmore3'}
+                disabled={isPending && loading !== 'readmore3'}
                 icon={
                   <img
                     className="h-[24px] w-[24px]"
@@ -113,9 +124,14 @@ export default function NewMarketing() {
                     alt="arrow"
                   />
                 }
-                onClick={() => {
+                onClick={async () => {
                   setLoading('readmore3');
-                  startTransition(() => router.push('/test'));
+                  await new Promise<void>((resolve) =>
+                    startTransition(async () => {
+                      await router.push('/test');
+                      resolve();
+                    })
+                  );
                 }}
               >
                 Readmore

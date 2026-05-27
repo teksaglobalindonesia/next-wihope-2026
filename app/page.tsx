@@ -7,6 +7,7 @@ import Achievement from '@/components/Achievement';
 import HowToDesign from '@/components/HowToDesign';
 import NewMarketing from '@/components/NewMarketing';
 import Ribbon from '@/components/Ribbon';
+import Footer from '@/components/Footer';
 export default function Page() {
   return (
     <div>
@@ -24,6 +25,7 @@ export default function Page() {
       </div>
       <div className="mt-[112.6px] flex flex-col">
         <Ribbon />
+        <Footer />
       </div>
     </div>
   );

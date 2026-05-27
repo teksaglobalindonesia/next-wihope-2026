@@ -9,14 +9,6 @@ export default function UnseenSpending() {
   const [loading, setLoading] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const handleNavClick = (linkName: string, href: string) => {
-    if (isPending) return;
-    setLoading(linkName);
-    startTransition(() => {
-      router.push(href);
-    });
-  };
-
   return (
     <div className="flex h-[433px] justify-center">
       <div className="flex h-[full] w-[1152px] items-center justify-between">
@@ -44,6 +36,7 @@ export default function UnseenSpending() {
             className="h-[52px] w-[151px] text-[16px]"
             loadingSize="h-[16px] w-[16px]"
             loading={loading === 'learnMore'}
+            disabled={isPending}
             onClick={() => {
               setLoading('learnMore');
               startTransition(() => router.push('/test'));

@@ -9,14 +9,6 @@ export default function Hero() {
   const [loading, setLoading] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  const handleNavClick = (linkName: string, href: string) => {
-    if (isPending) return;
-    setLoading(linkName);
-    startTransition(() => {
-      router.push(href);
-    });
-  };
-
   return (
     <div className="mt-[84px] flex h-[599px] justify-center bg-neutral-silver">
       <div className="flex h-full w-[1152px] items-center justify-between">
@@ -35,6 +27,7 @@ export default function Hero() {
             className="h-[52px] w-[128px] text-[16px]"
             loadingSize="h-[16px] w-[16px]"
             loading={loading === 'register'}
+            disabled={isPending}
             onClick={() => {
               setLoading('register');
               startTransition(() => router.push('/test'));

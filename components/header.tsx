@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import NavLink from './NavLink';
+import Link from './Link';
 import Button from './Button';
 
-const NAV_LINKS = [
+const LINKS = [
   { name: 'home', label: 'Home', href: '/home' },
   { name: 'service', label: 'Service', href: '/service' },
   { name: 'feature', label: 'Feature', href: '/feature' },
@@ -16,21 +16,30 @@ const NAV_LINKS = [
 
 export default function Header() {
   const router = useRouter();
-  const [loadingNav, setLoadingNav] = useState<string | null>(null);
+  const [loading, setLoading] = useState<string | null>(null);
   const [loadingAuth, setLoadingAuth] = useState<string | null>(null);
-  const [isPendingNav, startTransitionNav] = useTransition();
+  const [isPending, startTransition] = useTransition();
   const [isPendingAuth, startTransitionAuth] = useTransition();
 
-  const handleNavClick = (linkName: string, href: string) => {
-    if (isPendingNav) return;
-    setLoadingNav(linkName);
-    startTransitionNav(() => {
+  const handleClick = (linkName: string, href: string) => {
+    if (isPending) return;
+    setLoading(linkName);
+    startTransition(() => {
       router.push(href);
     });
   };
 
-  if (!isPendingNav && loadingNav !== null) setLoadingNav(null);
-  if (!isPendingAuth && loadingAuth !== null) setLoadingAuth(null);
+  useEffect(() => {
+    if (!isPending && loading !== null) {
+      setLoading(null);
+    }
+  }, [isPending, loading]);
+
+  useEffect(() => {
+    if (!isPendingAuth && loadingAuth !== null) {
+      setLoadingAuth(null);
+    }
+  }, [isPendingAuth, loadingAuth]);
 
   return (
     <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-center bg-neutral-silver">
@@ -42,17 +51,16 @@ export default function Header() {
           </p>
         </div>
         <div className="flex items-center justify-center gap-[50px] font-inter">
-          {NAV_LINKS.map(({ name, label, href }) => (
-            <NavLink
+          {LINKS.map(({ name, label, href }) => (
+            <Link
               key={name}
               href={href}
-              loading={loadingNav === name}
-              disabled={isPendingNav && loadingNav !== name}
-              onClick={() => handleNavClick(name, href)}
-              active={loadingNav === name}
+              disabled={isPending && loading !== name}
+              onClick={() => handleClick(name, href)}
+              active={loading === name}
             >
               {label}
-            </NavLink>
+            </Link>
           ))}
         </div>
         <div className="flex items-center justify-center gap-[14px]">
