@@ -5,6 +5,7 @@ import Community from '@/components/Community';
 import UnseenSpending from '@/components/UnseenSpending';
 import Achievement from '@/components/Achievement';
 import HowToDesign from '@/components/HowToDesign';
+import NewMarketing from '@/components/NewMarketing';
 export default function Page() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function Page() {
       <UnseenSpending />
       <Achievement />
       <HowToDesign />
+      <NewMarketing />
       </div>
     </div>
   );

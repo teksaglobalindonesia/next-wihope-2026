@@ -10,6 +10,7 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   loadingSize?: string;
+  icon?: React.ReactNode;
 };
 
 const variantStyles = {
@@ -115,7 +116,8 @@ export default function Button({
   loading,
   children,
   className = '',
-  loadingSize = 'h-[16px] w-[16px]'
+  loadingSize = 'h-[16px] w-[16px]',
+  icon
 }: ButtonProps) {
   const [isPending, startTransition] = useTransition();
 
@@ -154,7 +156,7 @@ export default function Button({
       `}
     >
       {children}
-      {isLoading && <LoadingIcon className={loadingSize} />}
+      {isLoading ? <LoadingIcon className={loadingSize} /> : icon}
     </button>
   );
 }
