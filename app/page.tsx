@@ -6,20 +6,24 @@ import UnseenSpending from '@/components/UnseenSpending';
 import Achievement from '@/components/Achievement';
 import HowToDesign from '@/components/HowToDesign';
 import NewMarketing from '@/components/NewMarketing';
+import Ribbon from '@/components/Ribbon';
 export default function Page() {
   return (
     <div>
       <Header />
-      <div className='flex flex-col gap-[40px]'>
+      <div className="flex flex-col gap-[40px]">
         <Hero />
         <OurClient />
         <Community />
       </div>
-      <div className='flex flex-col mt-[42px] gap-[48px]'>
-      <UnseenSpending />
-      <Achievement />
-      <HowToDesign />
-      <NewMarketing />
+      <div className="mt-[42px] flex flex-col gap-[48px]">
+        <UnseenSpending />
+        <Achievement />
+        <HowToDesign />
+        <NewMarketing />
+      </div>
+      <div className="mt-[112.6px] flex flex-col">
+        <Ribbon />
       </div>
     </div>
   );
