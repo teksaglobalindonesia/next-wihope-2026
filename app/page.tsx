@@ -5,7 +5,9 @@ import Header from "@/components/custom/header";
 import Hero from "@/components/custom/hero";
 import UnseenSpending from "@/components/custom/unseen-spending";
 import HowToDesign from "@/components/custom/how-to-design";
-import { Button } from "@/components/ui/button";
+import NewMarketing from "@/components/custom/new-marketing";
+import Ribbon from "@/components/custom/ribbon";
+import Footer from "@/components/custom/footer";
 
 
 export default function Page() {
@@ -18,9 +20,11 @@ export default function Page() {
     <UnseenSpending />
     <Achievements />
     <HowToDesign />
+    <NewMarketing />
+    <Ribbon />
+    <Footer />
 
 
     </>
-  ) ;
-    
+  );
 }
