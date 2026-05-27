@@ -1,9 +1,10 @@
 import Header from '../../components/web/HomePage/Header&Footer/header';
 import Footer from '@/components/web/HomePage/Header&Footer/Footer';
 import SimpleHero from '@/components/web/HomePage/ServicePage/SimpleHero';
-import Service1 from '@/components/web/HomePage/ServiceList/Service1';
-import Service2 from '@/components/web/HomePage/ServiceList/Service2';
-import Service3 from '@/components/web/HomePage/ServiceList/Service3';
+import Service1 from '@/components/web/HomePage/ServicePage/ServiceList/Service1';
+import Service2 from '@/components/web/HomePage/ServicePage/ServiceList/Service2';
+import Service3 from '@/components/web/HomePage/ServicePage/ServiceList/Service3';
+import Quote from '@/components/web/HomePage/ServicePage/Quote';
 export default function service() {
   return (
     <div className="mt-[84px]">
@@ -13,6 +14,7 @@ export default function service() {
         <Service1 />
         <Service2 />
         <Service3 />
+        <Quote />
       </div>
       <Footer />
     </div>

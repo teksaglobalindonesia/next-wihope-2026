@@ -2,26 +2,19 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from '../perButtonan/Button';
+import Button from '../../perButtonan/Button';
 
-export default function Service3() {
+export default function Service2() {
   const router = useRouter();
   const [loading, setLoading] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center bg-neutral-silver">
       <div className="flex h-[433px] w-[1152px] items-center justify-between font-inter">
-        <div className="flex h-full w-[368px] items-center">
-          <img
-            className="h-[286px] w-full rounded-[8px]"
-            src="/NewMarketing3.png"
-            alt="gambar"
-          />
-        </div>
         <div className="flex h-[224px] w-[661px] flex-col justify-between">
-          <div className='w-[601px]'>
+          <div className="w-[601px]">
             <p className="mb-[16px] text-[36px] font-semibold leading-[44px] text-neutral-d_grey">
-              Service 3
+              Service 2
             </p>
             <p className="text-[14px] leading-[20px] text-neutral-grey">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
@@ -45,6 +38,13 @@ export default function Service3() {
           >
             Learn More
           </Button>
+        </div>
+        <div className="flex h-full w-[368px] items-center">
+          <img
+            className="h-[286px] w-full rounded-[8px]"
+            src="/NewMarketing2.png"
+            alt="gambar"
+          />
         </div>
       </div>
     </div>

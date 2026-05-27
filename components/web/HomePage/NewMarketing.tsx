@@ -43,11 +43,20 @@ export default function NewMarketing() {
                 loading={loading === 'readmore1'}
                 disabled={isPending && loading !== 'readmore1'}
                 icon={
-                  <img
-                    className="h-[24px] w-[24px]"
-                    src="/right.png"
-                    alt="arrow"
-                  />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 }
                 onClick={async () => {
                   setLoading('readmore1');
@@ -81,11 +90,20 @@ export default function NewMarketing() {
                 loading={loading === 'readmore2'}
                 disabled={isPending && loading !== 'readmore2'}
                 icon={
-                  <img
-                    className="h-[24px] w-[24px]"
-                    src="/right.png"
-                    alt="arrow"
-                  />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 }
                 onClick={async () => {
                   setLoading('readmore2');
@@ -118,11 +136,20 @@ export default function NewMarketing() {
                 loading={loading === 'readmore3'}
                 disabled={isPending && loading !== 'readmore3'}
                 icon={
-                  <img
-                    className="h-[24px] w-[24px]"
-                    src="/right.png"
-                    alt="arrow"
-                  />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 16L19.2929 12.7071C19.6834 12.3166 19.6834 11.6834 19.2929 11.2929L16 8M19 12L5 12"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
                 }
                 onClick={async () => {
                   setLoading('readmore3');
