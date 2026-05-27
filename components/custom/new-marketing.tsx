@@ -23,8 +23,8 @@ export default function NewMarketing() {
         </p>
         <p className="h-[72px] w-[640px] text-center font-inter text-[16px] text-neutral-grey">
           The Nexcent blog is the best place to read about the latest membership
-          insights, trends and more. See who's joining the community, read about
-          how our community are increasing their membership income and lot's
+          insights, trends and more. See who&apos;s joining the community, read about
+          how our community are increasing their membership income and lot&apos;s
           more.​
         </p>
       </div>
