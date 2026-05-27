@@ -16,7 +16,7 @@ export default function NewMarketing() {
     }, 2000);
   };
   return (
-    <div className="h-[506px] w-full bg-white ">
+    <div className="h-[618px] w-full bg-white ">
       <div className="flex flex-col items-center gap-[8px]">
         <p className="text-center font-inter text-[36px] font-semibold text-neutral-d_grey">
           Caring is the new marketing
