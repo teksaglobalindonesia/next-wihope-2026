@@ -33,7 +33,9 @@ export default async function RootLayout({
           
             <NextTopLoader showSpinner={false} height={4} />
             <Toaster />
-            {children}
+            <main>
+              {children}
+            </main>
         </body>
       </html>
     </ReactQueryClientProvider>
