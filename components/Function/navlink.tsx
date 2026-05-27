@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 type NavLinkProps = {
   href: string;
   children: React.ReactNode;
@@ -16,8 +18,8 @@ export default function NavLink({
   variant = 'Navbar'
 }: NavLinkProps) {
   return (
-    <a
-      href={disabled ? undefined : href}
+    <Link
+      href={disabled ? '#' : href}
       onClick={disabled ? undefined : onClick}
       onMouseDown={(e) => e.preventDefault()}
       className={`
@@ -36,6 +38,6 @@ export default function NavLink({
       `}
     >
       {children}
-    </a>
+    </Link>
   );
 }

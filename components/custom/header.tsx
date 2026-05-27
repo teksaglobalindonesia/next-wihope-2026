@@ -45,7 +45,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/service"
           onClick={() => handleClick('service')}
           active={loadingLink === 'service'}
           disabled={loadingLink !== null && loadingLink !== 'service'}
@@ -54,7 +54,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/feature"
           onClick={() => handleClick('feature')}
           active={loadingLink === 'feature'}
           disabled={loadingLink !== null && loadingLink !== 'feature'}
@@ -63,7 +63,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/product"
           onClick={() => handleClick('product')}
           active={loadingLink === 'product'}
           disabled={loadingLink !== null && loadingLink !== 'product'}
@@ -72,7 +72,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/testimonial"
           onClick={() => handleClick('testimonial')}
           active={loadingLink === 'testimonial'}
           disabled={loadingLink !== null && loadingLink !== 'testimonial'}
@@ -81,7 +81,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/faq"
           onClick={() => handleClick('faq')}
           active={loadingLink === 'faq'}
           disabled={loadingLink !== null && loadingLink !== 'faq'}
