@@ -6,7 +6,7 @@ export default function Quote() {
             <img src="/image/image 9.png" alt="" />
 
             <div className="flex flex-col w-[748px] h-[324px]">
-                <div className="flex flex-col w-full h-[244px] gap-7 font-inter">
+                <div className="flex flex-col w-full h-[244px] gap-8 font-inter">
                     <p className="w-full h-[168px] text-sm leading-6 text-[#717171]">Maecenas dignissim justo eget nulla rutrum molestie. Maecenas lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu enim metus. Vivamus sed libero ornare, tristique quam in, gravida enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit at ligula molestie, nec molestie mi blandit. Suspendisse cursus tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse eget lorem eu turpis vestibulum pretium. Suspendisse potenti. Quisque malesuada enim sapien, vitae placerat ante feugiat eget. Quisque vulputate odio neque, eget efficitur libero condimentum id. Curabitur id nibh id sem dignissim finibus ac sit amet magna.</p>
                     <div className="w-full h-[60px] gap-2">
                         <h1 className="font-semibold text-xl text-[#4CAF4F]">Tim Smith</h1>

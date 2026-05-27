@@ -17,8 +17,8 @@ export default function Footer() {
                     </div>
 
                     <div className="w-[350px] h-12 gap-2 font-inter text-sm text-white">
-                        <h1 className="mb-2">Copyright © 2020 Nexcent ltd.</h1>
-                        <h2>All rights reserved</h2>
+                        <h1 className="mb-2 cursor-pointer">Copyright © 2020 Nexcent ltd.</h1>
+                        <h2 className="cursor-pointer">All rights reserved</h2>
                     </div>
 
                     <div className="flex flex-row w-32 h-8 gap-4">
@@ -30,7 +30,7 @@ export default function Footer() {
 
                 <div className="flex flex-row w-[635px] h-[200px] gap-24 text-white font-inter">
                     <div className="flex flex-col text-start gap-4">
-                        <h1 className="font-semibold text-xl">Company</h1>
+                        <h1 className="font-semibold text-xl cursor-pointer">Company</h1>
                         <CustButton variant={'footer'} size={'footer'}>About us</CustButton>
                         <CustButton variant={'footer'} size={'footer'}>Blog</CustButton>
                         <CustButton variant={'footer'} size={'footer'}>Contact Us</CustButton>
@@ -39,7 +39,7 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-col text-start gap-4">
-                        <h1 className="font-semibold text-xl">Support</h1>
+                        <h1 className="font-semibold text-xl cursor-pointer">Support</h1>
                         <CustButton variant={'footer'} size={'footer'}>Help Center</CustButton>
                         <CustButton variant={'footer'} size={'footer'}>Terms of Service</CustButton>
                         <CustButton variant={'footer'} size={'footer'}>Legal</CustButton>
