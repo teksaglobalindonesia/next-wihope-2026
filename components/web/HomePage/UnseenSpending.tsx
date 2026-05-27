@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from './Button';
+import Button from './perButtonan/Button';
 
 export default function UnseenSpending() {
   const router = useRouter();
@@ -17,19 +17,19 @@ export default function UnseenSpending() {
           src="/UnseenSpending.png"
           alt="Illustration"
         />
-        <div className="flex flex-col w-[661px] h-[268px] font-inter justify-between">
-          <div className='flex flex-col w-[601px] h-[184px] justify-between'>
-          <p className="mb-[8px] text-[36px] font-semibold leading-[44px] text-neutral-d_grey">
-            The unseen of spending three years at Pixelgrade
-          </p>
-          <p className="text-[14px] leading-[20px] text-neutral-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
-            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
-            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
-            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
-            elementum pulvinar odio.
-          </p>
+        <div className="flex h-[268px] w-[661px] flex-col justify-between font-inter">
+          <div className="flex h-[184px] w-[601px] flex-col justify-between">
+            <p className="mb-[8px] text-[36px] font-semibold leading-[44px] text-neutral-d_grey">
+              The unseen of spending three years at Pixelgrade
+            </p>
+            <p className="text-[14px] leading-[20px] text-neutral-grey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
           </div>
           <Button
             variant="primary"

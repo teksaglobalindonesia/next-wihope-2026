@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from './Button';
+import Button from './perButtonan/Button';
 
 export default function HowToDesign() {
   const router = useRouter();
@@ -22,7 +22,7 @@ export default function HowToDesign() {
             <p className="mb-[16px] text-[36px] font-semibold leading-[44px] text-neutral-d_grey">
               How to design your site footer like we did
             </p>
-            <p className="text-[14px] leading-[20px] text-neutral-grey w-full">
+            <p className="w-full text-[14px] leading-[20px] text-neutral-grey">
               Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
               augue nec tincidunt molestie, massa nunc varius arcu, at
               scelerisque elit erat a magna. Donec quis erat at libero ultrices

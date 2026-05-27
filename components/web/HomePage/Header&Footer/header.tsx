@@ -2,8 +2,8 @@
 
 import { useEffect, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from './Link';
-import Button from './Button';
+import Link from '../perButtonan/Link';
+import Button from '../perButtonan/Button';
 
 const LINKS = [
   { name: 'home', label: 'Home', href: '/' },

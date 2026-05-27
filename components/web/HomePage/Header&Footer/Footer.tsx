@@ -2,7 +2,7 @@
 
 import { useState, useTransition, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from './Link';
+import Link from '../perButtonan/Link';
 
 const LINKS = [
   { name: 'About us', label: 'About us', href: '/test' },

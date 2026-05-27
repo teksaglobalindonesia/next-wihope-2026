@@ -1,13 +1,13 @@
-import Header from '../components/header';
-import Hero from '@/components/Hero';
-import OurClient from '@/components/OurClient';
-import Community from '@/components/Community';
-import UnseenSpending from '@/components/UnseenSpending';
-import Achievement from '@/components/Achievement';
-import HowToDesign from '@/components/HowToDesign';
-import NewMarketing from '@/components/NewMarketing';
-import Ribbon from '@/components/Ribbon';
-import Footer from '@/components/Footer';
+import Header from '../components/web/HomePage/Header&Footer/header';
+import Hero from '@/components/web/HomePage/Hero';
+import OurClient from '@/components/web/HomePage/OurClient';
+import Community from '@/components/web/HomePage/Community';
+import UnseenSpending from '@/components/web/HomePage/UnseenSpending';
+import Achievement from '@/components/web/HomePage/Achievement';
+import HowToDesign from '@/components/web/HomePage/HowToDesign';
+import NewMarketing from '@/components/web/HomePage/NewMarketing';
+import Ribbon from '@/components/web/HomePage/Ribbon';
+import Footer from '@/components/web/HomePage/Header&Footer/Footer';
 export default function Page() {
   return (
     <div>

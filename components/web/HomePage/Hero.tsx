@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from './Button';
+import Button from './perButtonan/Button';
 
 export default function Hero() {
   const router = useRouter();
@@ -15,11 +15,11 @@ export default function Hero() {
         <div className="flex flex-col gap-[32px]">
           <div className="flex h-[152px] flex-col">
             <div className="font-inter text-[64px] font-semibold leading-[76px]">
-              <p className='text-neutral-d_grey'>Lessons and insights</p>
-              <p className='text-brand-primary'>from 8 years</p>
+              <p className="text-neutral-d_grey">Lessons and insights</p>
+              <p className="text-brand-primary">from 8 years</p>
             </div>
           </div>
-          <p className='text-[16px] font-inter text-neutral-grey'>
+          <p className="font-inter text-[16px] text-neutral-grey">
             Where to grow your business as a photographer: site or social media?
           </p>
           <Button

@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import Button from './Button';
+import Button from './perButtonan/Button';
 export default function Ribbon() {
   const router = useRouter();
   const [loading, setLoading] = useState<string | null>(null);
