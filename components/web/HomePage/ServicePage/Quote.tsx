@@ -41,32 +41,32 @@ export default function Quote() {
             <div className="flex h-fit w-fit gap-[41px]">
               <img
                 className="h-[48px] w-[48px]"
-                src="/client1.png"
+                src="/Client1.png"
                 alt="logo"
               />
               <img
                 className="h-[48px] w-[48px]"
-                src="/client3.png"
+                src="/Client3.png"
                 alt="logo"
               />
               <img
                 className="h-[48px] w-[48px]"
-                src="/client2.png"
+                src="/Client2.png"
                 alt="logo"
               />
               <img
                 className="h-[48px] w-[48px]"
-                src="/client5.png"
+                src="/Client5.png"
                 alt="logo"
               />
               <img
                 className="h-[48px] w-[48px]"
-                src="/client6.png"
+                src="/Client6.png"
                 alt="logo"
               />
               <img
                 className="h-[48px] w-[48px]"
-                src="/client7.png"
+                src="/Client7.png"
                 alt="logo"
               />
             </div>
