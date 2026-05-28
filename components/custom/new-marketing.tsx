@@ -25,8 +25,8 @@ export default function NewMarketing() {
           </h2>
           <p className="w-[628px] h-[72px] font-inter text-center text-[16px] leading-[24px] font-normal text-neutral-grey">
             The Nexcent blog is the best place to read about the latest membership insights, 
-            trends and more. See who's joining the community, read about how our community 
-            are increasing their membership income and lot's more.
+            trends and more. See who&apos;s joining the community, read about how our community 
+            are increasing their membership income and lot&apos;s more.
           </p>
         </div>
 

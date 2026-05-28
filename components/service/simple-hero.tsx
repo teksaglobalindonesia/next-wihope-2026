@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const SimpleHero = () => {
   return (
     <section className="flex h-[308px] w-full items-center justify-center bg-neutral-silver gap-[104px] px-[144px] py-[96px]">
