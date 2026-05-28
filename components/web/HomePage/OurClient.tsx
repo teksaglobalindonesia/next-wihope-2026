@@ -6,13 +6,13 @@ export default function OurClient(){
         <p className="text-neutral-grey leading-[24px] text-[14px]">We have been working with some Fortune 500+ clients</p>
       </div>
       <div className="flex w-[1152px] h-[98px] items-center justify-between">
-        <img className="h-[48px] w-[48px]" src="/client1.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client3.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client2.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client5.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client6.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client7.png" alt="logo" />
-        <img className="h-[48px] w-[48px]" src="/client4.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client1.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client3.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client2.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client5.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client6.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client7.png" alt="logo" />
+        <img className="h-[48px] w-[48px]" src="/Client4.png" alt="logo" />
       </div>
     </div>
   )
