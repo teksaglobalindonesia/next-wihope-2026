@@ -6,7 +6,7 @@ const UnseenSpending = () => {
     <section className="w-full max-w-[1440px] h-[433px] flex items-center justify-center gap-[32px] overflow-x-auto">
 
       <Image
-        src="/unseen-spending.png"
+        src="/assets/unseen-spending.png"
         alt="Unseen Spending"
         width={442}
         height={433}
