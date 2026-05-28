@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '../Button';
+import { Button } from '../button';
 
 type DataTableResetFilterProps = {
   isFilterActive: boolean;
