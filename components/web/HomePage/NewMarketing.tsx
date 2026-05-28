@@ -20,10 +20,9 @@ export default function NewMarketing() {
           Caring is the new marketing
         </p>
         <p className="w-[640px] text-center text-[16px] leading-[24px] text-neutral-grey">
-          The Nexcent blog is the best place to read about the latest membership
-          insights, trends and more. See who's joining the community, read about
-          how our community are increasing their membership income and lot's
-          more.​
+          {
+            "The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more.​"
+          }
         </p>
         <div className="mt-[16px] flex h-[366px] w-[1152px] justify-between">
           <div className="relative flex h-[366px] w-[368px] flex-col">
