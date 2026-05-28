@@ -8,7 +8,7 @@ export default function NewMarketing() {
         <p className='text-center w-[628px] h-[72px] '>{"The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more."}</p>
       </div>
 
-      <div className="flex justify-between px-[144px] w-full gap-4 h-[366px] ">
+      <div className="flex justify-between z-50 px-[144px] w-full gap-4 h-[366px] ">
         {/* card 1 */}
         <div className='relative flex justify-center w-[368px] h-[366px] '>
           <img className='h-[286px]' src='/marketing-logo/image 18.png' />
