@@ -1,11 +1,27 @@
-import Hero from "@/components/custom/Hero";
-import NavBar from "@/components/custom/NavBar";
+import Community from "@/components/custom/community";
+import Hero from "@/components/custom/hero";
+import Header from "@/components/custom/header";
+import OurClients from "@/components/custom/our-clients";
+import UnsenSpending from "@/components/custom/unseen-spending";
+import Achievement from "@/components/custom/achievement";
+import HowToDesign from "@/components/custom/how-to-design";
+import NewMarketing from "@/components/custom/new-marketing";
+import Ribbon from "@/components/custom/ribbon";
+import Footer from "@/components/custom/footer";
 
-export default function page() {
+export default function Page() {
   return (
     <>
-      <NavBar />
+      <Header />
       <Hero />
+      <OurClients />
+      <Community />
+      <UnsenSpending />
+      <Achievement />
+      <HowToDesign />
+      <NewMarketing />
+      <Ribbon />
+      <Footer />
     </>
   );
 }
