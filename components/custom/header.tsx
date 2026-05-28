@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <div className="sticky top-0 flex h-[84px] w-full flex-row justify-between bg-[#F5F7FA] px-8">
+    <div className="fixed top-0 left-0 right-0 z-50 flex h-[84px] w-full flex-row justify-between bg-[#F5F7FA] px-8">
       <div className="ml-[30px] mt-[25px] flex h-[24px] w-[154.49px] flex-row items-center gap-[8px]">
         <img src="/image/Icon.png" className="ml-105 h-[24px] w-[35px]" alt="Icon"/>
         <h1 className="h-[20.66px] w-[111.49px] pb-8 text-2xl font-bold text-brand-secondary">Nexcent</h1>

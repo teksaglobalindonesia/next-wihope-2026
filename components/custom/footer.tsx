@@ -22,9 +22,9 @@ export default function Footer() {
                     </div>
 
                     <div className="flex flex-row w-32 h-8 gap-4">
-                        <img src="/footer-image/Social Icons 1.png" alt="icon 1" />
-                        <img src="/footer-image/Social Icons 2.png" alt="icon 2" />
-                        <img src="/footer-image/Social Icons 3.png" alt="icon 3 " />
+                        <img src="/footer-image/Social Icons 1 new.png" alt="icon 1" />
+                        <img src="/footer-image/Social Icons 2 new.png" alt="icon 2" />
+                        <img src="/footer-image/Social Icons 3 new.png" alt="icon 3 " />
                     </div>
                 </div>
 
