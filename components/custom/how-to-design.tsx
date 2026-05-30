@@ -4,7 +4,7 @@ export default function HowToDesign() {
     return(
         <div className="w-full h-[433.4px] my-12 px-[120px] ">
             <div className="flex flex-row gap-7 items-center">
-                <img src="/image/pana.png" alt="image" />
+                <img src="/image/pana new.png" alt="image" className="w-[441.53px] h-[433.4px]" />
                     
                     <div className="flex flex-col w-[761px] mt-2 gap-5 ml-9 mr-[144px] mb-[62.7px]">
                         <div className="flex flex-col">
