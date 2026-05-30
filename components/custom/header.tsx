@@ -1,6 +1,22 @@
-import Link from "next/link";
+"use client";
 
-export default function Header () {
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useAuthStore } from "@/stores/use-auth-store";
+
+type AuthStore = {
+  name?: string;
+  clearName: () => void;
+};
+
+export default function Header() {
+  const router = useRouter();
+  const { name, clearName } = useAuthStore() as AuthStore;
+
+  const handleLogout = () => {
+    clearName();
+    router.push("/");
+  };
 
   const menus = [
     "Home",
@@ -13,54 +29,53 @@ export default function Header () {
 
   return (
     <nav className="w-full bg-neutral-silver">
-
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-[105px] py-[30px]">
-
         <div className="flex items-center gap-[8px]">
-
           <img
             src="/assets/logo.png"
             alt="Logo"
             className="h-[24px] w-[35px]"
           />
-
           <h1 className="font-inter text-[24px] font-bold leading-[28px] text-primary-brand-secondary">
             Nexcent
           </h1>
-
         </div>
 
         <div className="flex items-center gap-[120px]">
-
           <ul className="flex items-center gap-[50px]">
-
             {menus.map((menu) => (
               <li
                 key={menu}
                 className="list-none font-inter text-[16px] font-normal leading-6 text-gray-900"
               >
-                <Link
-                  href={menu === "Service" ? "/service" : "#"}
-                >
+                <Link href={menu === "Service" ? "/service" : "#"}>
                   {menu}
                 </Link>
               </li>
             ))}
-
           </ul>
 
           <div className="flex items-center gap-[14px]">
-
-            <button className="cursor-pointer rounded-md px-5 py-[10px] font-inter text-[14px] font-medium leading-4 text-primary-brand-primary transition-all hover:text-green-800 hover:opacity-80">
-              Login
-            </button>
-
-            <button className="cursor-pointer rounded-md bg-primary-brand-primary px-5 py-[10px] font-inter text-[14px] font-medium leading-5 text-white transition-all hover:bg-green-700">
-              Sign Up
-            </button>
-
+            {name ? (
+              <>
+                <span className="font-inter text-[14px] font-medium leading-4 text-primary-brand-primary">
+                  {name}
+                </span>
+                <button onClick={handleLogout} className="cursor-pointer rounded-md px-5 py-[10px] font-inter text-[14px] font-medium leading-5 text-white bg-primary-brand-primary transition-all hover:bg-green-700">
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <button onClick={() => router.push("/login")} className="cursor-pointer rounded-md px-5 py-[10px] font-inter text-[14px] font-medium leading-4 text-primary-brand-primary transition-all hover:text-green-800 hover:opacity-80">
+                  Login
+                </button>
+                <button onClick={() => router.push("/signup")}  className="cursor-pointer rounded-md bg-primary-brand-primary px-5 py-[10px] font-inter text-[14px] font-medium leading-5 text-white transition-all hover:bg-green-700">
+                  Sign Up
+                </button>
+              </>
+            )}
           </div>
-
         </div>
       </div>
     </nav>
