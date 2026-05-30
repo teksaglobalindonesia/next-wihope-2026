@@ -21,9 +21,9 @@ const buttonVariants = cva(
         // Custom
         navLink:            'text-gray-900 underline-offset-4 hover:underline focus:border focus:border-neutral-l-grey active:text-shade-2 disabled:text-neutral-grey-blue',
 
-        standardPrimary:    'bg-brand-primary text-neutral-white focus:border-2 focus:border-neutral-d-grey active:bg-shade-2 disabled:bg-neutral-silver disabled:text-neutral-grey-blue',
-        standardSecondary:  'bg-brand-secondary text-neutral-white border border-brand-primary hover:bg-neutral-silver focus:bg-neutral-l-grey focus:border-2 focus:border-neutral-l-grey active:bg-neutral-silver disabled:bg-neutral-silver disabled:text-neutral-grey-blue',
-        standardTertiary:   'bg-transparent text-brand-primary hover:bg-neutral-silver focus:bg-transparent focus:border-2   focus:border-neutral-d-grey active:bg-tint-5 disabled:bg-neutral-silver disabled:text-neutral-grey-blue'
+        standardPrimary:    'bg-brand-primary text-neutral-white transition duration-200 focus:border-2 focus:border-neutral-d-grey active:bg-shade-2 disabled:bg-neutral-silver disabled:text-neutral-grey-blue',
+        standardSecondary:  'bg-brand-secondary text-neutral-white border border-brand-primary transition duration-200 hover:bg-neutral-silver focus:bg-neutral-l-grey focus:border-2 focus:border-neutral-l-grey active:bg-neutral-silver disabled:bg-neutral-silver disabled:text-neutral-grey-blue',
+        standardTertiary:   'bg-transparent text-brand-primary transition duration-200 hover:bg-neutral-silver focus:bg-transparent focus:border-2   focus:border-neutral-d-grey active:bg-tint-5 disabled:bg-neutral-silver disabled:text-neutral-grey-blue'
 
       },
       size: {

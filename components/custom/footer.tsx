@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
     return (
         <>
-            <div className="flex justify-between items-center bg-neutral-black py-16 px-[165px] gap-[125px]">
+            <footer className="flex justify-between items-center bg-neutral-black py-16 w-full px-[165px] gap-[125px]">
                 <div className="flex flex-col items-start gap-[40px]">
                     <div className="flex items-center justify-start gap-2">
                         <Image
@@ -18,9 +19,9 @@ export default function Footer() {
                         </h1>
                     </div>
 
-                    <div className="flex flex-col items-start">
-                        <p className="text-sm text-neutral-silver">Copyright © 2026 Nexcent ltd.</p>
-                        <p className="text-sm text-neutral-silver">All rights reserved</p>
+                    <div className="flex flex-col items-start text-sm text-neutral-silver gap-2">
+                        <p>Copyright © 2026 Nexcent ltd.</p>
+                        <p>All rights reserved</p>
                     </div>
 
                     <div className="flex items-center justify-start gap-4">
@@ -50,23 +51,23 @@ export default function Footer() {
                 <div className="grid grid-cols-3 gap-[30px]">
                     <div className="flex flex-col items-start gap-6 w-[160px]">
                         <h3 className="text-neutral-white text-xl font-semibold">Company</h3>
-                        <div className="flex flex-col items-start gap-3">
-                            <p className="text-sm text-neutral-silver">About us</p>
-                            <p className="text-sm text-neutral-silver">Blog</p>
-                            <p className="text-sm text-neutral-silver">Contact us</p>
-                            <p className="text-sm text-neutral-silver">Pricing</p>
-                            <p className="text-sm text-neutral-silver">Testimonials</p>
+                        <div className="flex flex-col items-start gap-3 text-sm text-neutral-silver">
+                            <Link href="/about">About us</Link>
+                            <Link href="/blog">Blog</Link>
+                            <Link href="/contact">Contact us</Link>
+                            <Link href="/pricing">Pricing</Link>
+                            <Link href="/testimonials">Testimonials</Link>
                         </div>
                     </div>
 
                     <div className="flex flex-col items-start gap-6 w-[160px]">
                         <h3 className="text-neutral-white text-xl font-semibold">Support</h3>
-                        <div className="flex flex-col items-start gap-3">
-                            <p className="text-sm text-neutral-silver">Help center</p>
-                            <p className="text-sm text-neutral-silver">Terms of service</p>
-                            <p className="text-sm text-neutral-silver">Legal</p>
-                            <p className="text-sm text-neutral-silver">Privacy policy</p>
-                            <p className="text-sm text-neutral-silver">Status</p>
+                        <div className="flex flex-col items-start gap-3 text-sm text-neutral-silver">
+                            <Link href="/about">Help center</Link>
+                            <Link href="/tos">Terms of service</Link>
+                            <Link href="/legal">Legal</Link>
+                            <Link href="/policy">Privacy policy</Link>
+                            <Link href="/status">Status</Link>
                         </div>
                     </div>
 
@@ -74,7 +75,7 @@ export default function Footer() {
 
                     </div>
                 </div>
-            </div>
+            </footer>
         </>
     )
 }

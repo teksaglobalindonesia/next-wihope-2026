@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Services } from "@/lib/data-dummy"
-import { ImageConfigContext } from "next/dist/shared/lib/image-config-context.shared-runtime";
 
 export default function ServiceList() {
     return (

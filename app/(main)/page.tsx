@@ -1,6 +1,3 @@
-import Header from "@/components/custom/header";
-import Footer from "@/components/custom/footer";
-
 import Hero from "@/components/custom/home/hero";
 import OurClients from "@/components/custom/home/our-clients";
 import Community from "@/components/custom/home/community";
@@ -13,10 +10,6 @@ import Ribbon from "@/components/custom/home/ribbon";
 export default function Page() {
   return (
     <>
-      <header>
-        <Header/>
-      </header>
-
       <div className="flex flex-col gap-10 mb-[112px]">
         <Hero/>
         <OurClients/>
@@ -28,9 +21,6 @@ export default function Page() {
       </div>
 
       <Ribbon/>
-      <footer>
-        <Footer/>
-      </footer>
     </>
   )
 }

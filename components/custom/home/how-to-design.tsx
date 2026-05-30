@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function HowToDesign() {
     return (
         <>
-            <div className="flex justify-between items-center px-[144px] w-full bg-neutral-white">
+            <div className="flex justify-center items-center px-[144px] gap-[49px] w-full bg-neutral-white">
                 <div className="flex items-center">
                     <Image
                         src="/illustrations/mobile-login-illustration-2.png"

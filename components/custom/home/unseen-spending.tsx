@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function UnseenSpending() {
     return (
         <>
-            <div className="flex justify-between items-center px-[144px] w-full">
+            <div className="flex justify-center items-center gap-[49px] px-[144px] w-full bg-neutral-white">
                 <div className="flex items-center justify-center">
                     <Image
                         src="/illustrations/mobile-login-illustration.png"
