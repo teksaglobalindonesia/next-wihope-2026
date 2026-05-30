@@ -4,7 +4,7 @@ export default function UnseenSpending() {
     return(
         <div className="w-full h-[433px] pl-[144px] mt-[42px]">
             <div className="flex flex-row items-center">
-                <img src="/image/Frame 35.png" alt="image" />
+                <img src="/image/Frame 35 new2.png" alt="image" className="w-[441] h-[328.99px] mt-[52px]" />
                     
                     <div className="flex flex-col w-[661px] gap-5  mr-[144]">
                         <div className="mr-[60px] ">

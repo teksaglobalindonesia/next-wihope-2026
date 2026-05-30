@@ -12,7 +12,7 @@ export default function Achievement() {
                 
                 {/* Item 1: Members */}
                 <div className="flex flex-row items-center gap-4">
-                    <img src="/achievement-logo/achv1.png" alt="Members Icon" className="w-[48px] h-[48px]" />
+                    <img src="/achievement-logo/achv1 new.png" alt="Members Icon" className="w-[48px] h-[48px]" />
                     <div className="flex flex-col">
                         <h2 className="font-bold text-[28px] leading-[36px] text-[#4D4D4D]">2,245,341</h2>
                         <p className="text-[16px] text-[#717171]">Members</p>
@@ -21,7 +21,7 @@ export default function Achievement() {
 
                 {/* Item 2: Clubs */}
                 <div className="flex flex-row items-center gap-4">
-                    <img src="/achievement-logo/achv2.png" alt="Clubs Icon" className="w-[48px] h-[48px]" />
+                    <img src="/achievement-logo/achv2 new.png" alt="Clubs Icon" className="w-[48px] h-[48px]" />
                     <div className="flex flex-col">
                         <h2 className="font-bold text-[28px] leading-[36px] text-[#4D4D4D]">46,328</h2>
                         <p className="text-[16px] text-[#717171]">Clubs</p>
@@ -30,7 +30,7 @@ export default function Achievement() {
 
                 {/* Item 3: Event Bookings */}
                 <div className="flex flex-row items-center gap-4">
-                    <img src="/achievement-logo/achv3.png" alt="Event Icon" className="w-[48px] h-[48px]" />
+                    <img src="/achievement-logo/achv3 new.png" alt="Event Icon" className="w-[48px] h-[48px]" />
                     <div className="flex flex-col">
                         <h2 className="font-bold text-[28px] leading-[36px] text-[#4D4D4D]">828,867</h2>
                         <p className="text-[16px] text-[#717171]">Event Bookings</p>
@@ -39,7 +39,7 @@ export default function Achievement() {
 
                 {/* Item 4: Payments */}
                 <div className="flex flex-row items-center gap-4">
-                    <img src="/achievement-logo/achv4.png" alt="Payments Icon" className="w-[48px] h-[48px]" />
+                    <img src="/achievement-logo/achv4 new.png" alt="Payments Icon" className="w-[48px] h-[48px]" />
                     <div className="flex flex-col">
                         <h2 className="font-bold text-[28px] leading-[36px] text-[#4D4D4D]">1,926,436</h2>
                         <p className="text-[16px] text-[#717171]">Payments</p>

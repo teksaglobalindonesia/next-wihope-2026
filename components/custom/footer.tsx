@@ -28,7 +28,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-row w-[635px] h-[200px] gap-24 text-white font-inter">
+                <div className="flex flex-row justify-start w-[635px] h-[200px] gap-24 text-white font-inter">
                     <div className="flex flex-col text-start gap-4">
                         <h1 className="font-semibold text-xl cursor-pointer">Company</h1>
                         <CustButton variant={'footer'} size={'footer'}>About us</CustButton>

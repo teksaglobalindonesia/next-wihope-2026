@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/button';
 export default function Page() {
   return (
     <div>
-      <Hero />
+      <Hero/>
       <OurClients />
       <Community />
       <UnseenSpending />
