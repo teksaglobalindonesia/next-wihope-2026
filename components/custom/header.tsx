@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import NavLink from '../Function/navlink';
 import Button from '../Function/button';
 
@@ -16,19 +17,22 @@ export default function Header() {
   };
 
   const [loadingButton, setLoadingButton] = useState<string | null>(null);
+  const router = useRouter();
 
-  const handleButtonClick = (buttonName: string) => {
+  const handleButtonClick = (buttonName: string, href: string) => {
     setLoadingButton(buttonName);
 
-    setTimeout(() => {
-      setLoadingButton(null);
-    }, 2000);
+    router.push(href);
   };
 
   return (
     <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-between bg-neutral-silver px-[50px]">
       <div className="flex items-center gap-[8px]">
-        <img src="../Icon-images/Icon.png" alt="Logo" className="h-[24px] w-[35px]" />
+        <img
+          src="../Icon-images/Icon.png"
+          alt="Logo"
+          className="h-[24px] w-[35px]"
+        />
         <p className="text-[28px] font-semibold text-brand-secondary">
           Nexcent
         </p>
@@ -96,7 +100,7 @@ export default function Header() {
           className="h-[40px] w-[77px] rounded-[6px] text-[14px]"
           loading={loadingButton === 'login'}
           disabled={loadingButton !== null && loadingButton !== 'login'}
-          onClick={() => handleButtonClick('login')}
+          onClick={() => handleButtonClick('login', '/login')}
         >
           Login
         </Button>
@@ -105,7 +109,7 @@ export default function Header() {
           variant="Primary"
           loading={loadingButton === 'sign up'}
           disabled={loadingButton !== null && loadingButton !== 'sign up'}
-          onClick={() => handleButtonClick('sign up')}
+          onClick={() => handleButtonClick('sign up', '/sign up')}
         >
           Sign Up
         </Button>
