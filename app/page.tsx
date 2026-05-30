@@ -1,5 +1,5 @@
 import Community from "@/components/custom/community";
-import Hero from "@/components/custom/hero";
+import Hero from "@/components/custom/Hero";
 import Header from "@/components/custom/header";
 import OurClients from "@/components/custom/our-clients";
 import UnsenSpending from "@/components/custom/unseen-spending";
