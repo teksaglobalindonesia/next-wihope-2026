@@ -13,7 +13,7 @@ const buttonVariants = cva(
         secondary:'bg-transparent text-brand-primary border border-transparent hover:border-[#4CAF4F] hover:scale-105 hover:underline transition duration-300 ease-in-out ',
         header:'bg-transparent text-gray-900 hover:scale-105 hover:underline transition duration-300 ease-in-out ',
         footer:'bg-transparent text-white hover:scale-105 hover:underline transition duration-300 ease-in-out',
-        secondary2:'bg-transparent text-black border border-transparent hover:border-black hover:scale-105 hover:underline transition duration-300 ease-in-out ',
+        secondary2:'bg-transparent text-black hover:scale-105 hover:underline transition duration-300 ease-in-out ',
       },
       size: {
         normal: 'w-[135px] h-[50px] text-lg flex items-center whitespace-nowrap',
