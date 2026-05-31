@@ -1,10 +1,21 @@
+'use client';
+
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/stores/use-auth-store';
+
 export default function Header() {
+  const name = useAuthStore((state: any) => state.name);
+  const clearName = useAuthStore((state: any) => state.clearName);
+  const router = useRouter();
+  const handleLogout = () => {
+    clearName();
+    router.push('/');
+  };
+
   return (
-    <header className="fixed top-0 z-50 bg-neutral-silver w-full ">
-
+    <header className="fixed top-0 z-50 w-full bg-neutral-silver ">
       <div className="flex h-[84px] flex-row items-center px-[144px]">
-
         <img alt="logo" src="/logo.svg" width={154} height={24} />
 
         <nav className="flex h-[24px] flex-1 items-center justify-center gap-[50px] text-[16px] font-normal leading-[24px] text-gray-900">
@@ -45,16 +56,32 @@ export default function Header() {
             FAQ
           </Link>
         </nav>
+        {name ? (
+          <div className="flex items-center gap-4">
+            <span className="font-medium text-brand-primary">{name}</span>
 
-        <div className="flex items-center gap-[14px]">
-          <button className="font-inter h-[40px] rounded-[6px] px-5 text-[14px] font-medium leading-[20px] text-brand-primary transition-colors duration-300 hover:border hover:border-gray-300">
-            Login
-          </button>
+            <button
+              onClick={handleLogout}
+              className="rounded-[6px] bg-red-500 px-[16px] py-[8px] text-white"
+            >
+              Logout
+            </button>
+          </div>
+        ) : (
+          
+          <div className="flex items-center gap-4">
+    <Link
+      href="/login"
+      className="text-brand-primary hover:underline  hover:border rounded-[6px] px-[20px] py-[10px] "
+    >
+      Login
+    </Link>
 
-          <button className="font-inter h-[40px] w-[91px] rounded-[6px] bg-brand-primary px-5 text-[14px] font-medium leading-[20px] text-white transition-colors duration-300 hover:border hover:border-white">
-            Sign up
-          </button>
-        </div>
+    <button className="rounded-[6px] bg-brand-primary px-[20px] py-[10px] text-white hover:scale-[1.05] transition-all duration-300">
+      Sign Up
+    </button>
+  </div>
+        )}
       </div>
     </header>
   );
