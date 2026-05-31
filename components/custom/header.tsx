@@ -58,11 +58,11 @@ export default function Header() {
         </nav>
         {name ? (
           <div className="flex items-center gap-4">
-            <span className="font-medium text-brand-primary">{name}</span>
+            <span className="font-inter font-bold text-[14px] leading-[20px] hover:underline text-brand-primary">{name}</span>
 
             <button
               onClick={handleLogout}
-              className="rounded-[6px] bg-red-500 px-[16px] py-[8px] text-white"
+              className=" text-neutral-black font-inter text-[14px] leading-[20px] hover:underline "
             >
               Logout
             </button>
@@ -72,12 +72,12 @@ export default function Header() {
           <div className="flex items-center gap-4">
     <Link
       href="/login"
-      className="text-brand-primary hover:underline  hover:border rounded-[6px] px-[20px] py-[10px] "
+      className="font-inter text-brand-primary hover:underline text-[14px] leading-[20px] hover:border rounded-[6px] px-[20px] py-[10px] "
     >
       Login
     </Link>
 
-    <button className="rounded-[6px] bg-brand-primary px-[20px] py-[10px] text-white hover:scale-[1.05] transition-all duration-300">
+    <button className="font-inter text-white hover:scale-[1.05] transition-all duration-300 rounded-[6px] bg-brand-primary px-[20px] py-[10px] text-[14px] leading-[20px]">
       Sign Up
     </button>
   </div>

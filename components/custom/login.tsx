@@ -35,39 +35,39 @@ export default function Login() {
 
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Enter your name"
           value={name}
           onChange={(e) =>
             setNameInput(e.target.value)
           }
-          className="rounded border p-3"
+          className="rounded border border-neutral-d-grey p-3"
         />
 
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Enter your email"
           value={email}
           onChange={(e) =>
             setEmail(e.target.value)
           }
-          className="rounded border p-3"
+          className="rounded border border-neutral-d-grey p-3"
         />
 
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Enter your password"
           value={password}
           onChange={(e) =>
             setPassword(e.target.value)
           }
-          className="rounded border p-3"
+          className="rounded border border-neutral-d-grey p-3"
         />
 
         <button
           type="submit"
-          className="rounded bg-brand-primary p-3 text-white"
+          className="rounded-[6px] px-[20px] py-[10px] bg-brand-primary  text-white"
         >
-          Login
+          Submit
         </button>
       </form>
     </div>
