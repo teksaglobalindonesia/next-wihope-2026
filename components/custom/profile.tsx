@@ -69,7 +69,7 @@ export default function Profile() {
         <div className="mb-[20px] flex justify-center gap-3">
           <Button
             variant="Secondary"
-            className="h-[40px] w-[100px] rounded-lg  bg-white text-center font-semibold transition duration-500 ease-in-out hover:bg-black hover:text-white"
+            className="h-[40px] w-[100px] rounded-lg bg-white text-center font-semibold transition duration-500 ease-in-out"
             loading={loadingButton === 'logout'}
             disabled={loadingButton !== null && loadingButton !== 'logout'}
             onClick={() => handleLogout()}
