@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import NavLink from '../Function/navlink';
 import Button from '../Function/button';
+import { useAuthStore } from '@/stores/use-auth-store';
 
 export default function Header() {
   const [loadingLink, setLoadingLink] = useState<string | null>(null);
@@ -25,6 +26,12 @@ export default function Header() {
     router.push(href);
   };
 
+  const { username, clearData } = useAuthStore();
+  const handleLogout = () => {
+    clearData();
+
+    router.push('/');
+  };
   return (
     <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-between bg-neutral-silver px-[50px]">
       <div className="flex items-center gap-[8px]">
@@ -58,7 +65,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/feature"
+          href="/"
           onClick={() => handleClick('feature')}
           active={loadingLink === 'feature'}
           disabled={loadingLink !== null && loadingLink !== 'feature'}
@@ -67,7 +74,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/product"
+          href="/"
           onClick={() => handleClick('product')}
           active={loadingLink === 'product'}
           disabled={loadingLink !== null && loadingLink !== 'product'}
@@ -76,7 +83,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/testimonial"
+          href="/"
           onClick={() => handleClick('testimonial')}
           active={loadingLink === 'testimonial'}
           disabled={loadingLink !== null && loadingLink !== 'testimonial'}
@@ -85,7 +92,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/faq"
+          href="/"
           onClick={() => handleClick('faq')}
           active={loadingLink === 'faq'}
           disabled={loadingLink !== null && loadingLink !== 'faq'}
@@ -95,24 +102,51 @@ export default function Header() {
       </div>
 
       <div className="flex h-[80px] w-[180px] items-center gap-[14px]">
-        <Button
-          variant="Tertiary"
-          className="h-[40px] w-[77px] rounded-[6px] text-[14px]"
-          loading={loadingButton === 'login'}
-          disabled={loadingButton !== null && loadingButton !== 'login'}
-          onClick={() => handleButtonClick('login', '/login')}
-        >
-          Login
-        </Button>
-        <Button
-          className="h-[40px] w-[91px] rounded-[6px] text-[14px]"
-          variant="Primary"
-          loading={loadingButton === 'sign up'}
-          disabled={loadingButton !== null && loadingButton !== 'sign up'}
-          onClick={() => handleButtonClick('sign up', '/sign up')}
-        >
-          Sign Up
-        </Button>
+        {!username ? (
+          <>
+            <Button
+              variant="Tertiary"
+              className="h-[40px] w-[77px] rounded-[6px] text-[14px]"
+              loading={loadingButton === 'login'}
+              disabled={loadingButton !== null && loadingButton !== 'login'}
+              onClick={() => handleButtonClick('login', '/login')}
+            >
+              Login
+            </Button>
+            <Button
+              className="h-[40px] w-[91px] rounded-[6px] text-[14px]"
+              variant="Primary"
+              loading={loadingButton === 'sign up'}
+              disabled={loadingButton !== null && loadingButton !== 'sign up'}
+              onClick={() => handleButtonClick('sign up', '/sign up')}
+            >
+              Sign Up
+            </Button>
+          </>
+        ) : (
+          <>
+            <Button
+              variant="Tertiary"
+              className="h-[40px] w-[77px] rounded-[6px] text-[14px]"
+              loading={loadingButton === 'profile'}
+              disabled={loadingButton !== null && loadingButton !== 'profile'}
+              onClick={() => handleButtonClick('profile', '/profile')}
+              iconPosition='left'
+              icon={<img src="/Icon-images/Sukuna.jpg" alt="" className="size-[30px] rounded-full"/>}
+            >
+              {username.slice(0,6)}
+            </Button>
+            <Button
+              className="h-[40px] w-[91px] rounded-[6px] text-[14px] underline underline-offset-2 decoration-brand-primary"
+              variant="Tertiary"
+              loading={loadingButton === 'logout'}
+              disabled={loadingButton !== null && loadingButton !== 'logout'}
+              onClick={() => handleLogout()}
+            >
+              Logout
+            </Button>
+          </>
+        )}
       </div>
     </div>
   );

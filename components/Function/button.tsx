@@ -4,8 +4,10 @@ type ButtonProps = {
   disabled?: boolean;
   onClick?: () => void;
   variant: 'Primary' | 'Secondary' | 'Tertiary';
+  type?: "button" | "submit"
   className?: string;
   icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right'
 };
 
 export default function Button({
@@ -14,8 +16,10 @@ export default function Button({
   disabled = false,
   onClick,
   variant,
+  type = "button",
   className = "",
-  icon
+  icon,
+  iconPosition = 'right'
 }: ButtonProps) {
   const variantStyles = {
     Primary: `
@@ -37,7 +41,7 @@ export default function Button({
 
     Tertiary: `
       text-brand-primary
-      hover:bg-neutral-sliver
+      hover:bg-neutral-silver
       font-medium
       font-inter
     `
@@ -63,6 +67,7 @@ export default function Button({
     <button
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
+      type={type}
       className={`
         flex justify-center items-center gap-1
         transition-all duration-300
@@ -75,21 +80,29 @@ export default function Button({
 
         ${
           disabled
-            ? 'cursor-not-allowed !bg-neutral-silver !text-neutral-grey-blue border-none'
+            ? 'cursor-not-allowed !bg-neutral-silver !text-neutral-grey-blue !border-none'
             : ''
         }
 
       `}
     >
-      {children}
-
-      {loading ? (
+      {iconPosition === "left" && (loading ? (
         <img
           src={loadingImages[variant]}
           alt="loading"
           className="h-4 w-4 animate-spin"
         />
-      ) : (icon)}
+      ) : (icon))}
+
+      {children}
+
+      {iconPosition === "right" && (loading ? (
+        <img
+          src={loadingImages[variant]}
+          alt="loading"
+          className="h-4 w-4 animate-spin"
+        />
+      ) : (icon))}
  
     </button>
   );
