@@ -32,13 +32,6 @@ export default function Header() {
     });
   };
 
-  const handleLogout = () => {
-    if (!confirm('Yakin ingin logout?')) return;
-
-    clearName();
-    router.push('/');
-  };
-
   useEffect(() => {
     if (!isPending && loading !== null) {
       setLoading(null);
@@ -78,17 +71,33 @@ export default function Header() {
             <>
               <Button
                 variant="tertiary"
-                className="mr-[20px] flex h-fit w-fit items-center justify-center text-[14px] font-bold leading-[20px] text-brand-primary underline [text-decoration-skip-ink:none] underline-offset-[3.2px]"
-                onClick={() => router.push('/profile')}
+                className="mr-[20px] flex h-fit w-fit items-center justify-center text-[14px] font-bold leading-[20px] text-brand-primary underline underline-offset-[3.2px] [text-decoration-skip-ink:none]"
+                loadingSize="h-[16px] w-[16px]"
+                loading={loadingAuth === 'profile'}
+                disabled={isPendingAuth}
+                onClick={() => {
+                  setLoadingAuth('profile');
+                  startTransitionAuth(() => router.push('/profile'));
+                }}
               >
                 {name}
               </Button>
 
               <Button
                 variant="tertiary"
-                className="h-fit w-fit text-[14px] font-medium leading-[20px] text-neutral-black underline [text-decoration-skip-ink:none] underline-offset-[3.2px]"
+                className="h-fit w-fit text-[14px] font-medium leading-[20px] text-neutral-black underline underline-offset-[3.2px] [text-decoration-skip-ink:none]"
+                loadingSize="h-[16px] w-[16px]"
+                loading={loadingAuth === 'logout'}
+                disabled={isPendingAuth}
                 onClick={() => {
-                  handleLogout();
+                  if (!confirm('Yakin ingin logout?')) return;
+
+                  setLoadingAuth('logout');
+
+                  startTransitionAuth(() => {
+                    clearName();
+                    router.push('/');
+                  });
                 }}
               >
                 Logout
@@ -99,7 +108,13 @@ export default function Header() {
               <Button
                 variant="tertiary"
                 className="h-[40px] w-[77px] text-[14px]"
-                onClick={() => router.push('/login')}
+                loadingSize="h-[16px] w-[16px]"
+                loading={loadingAuth === 'login'}
+                disabled={isPendingAuth}
+                onClick={() => {
+                  setLoadingAuth('login');
+                  startTransitionAuth(() => router.push('/login'));
+                }}
               >
                 Login
               </Button>
@@ -107,7 +122,13 @@ export default function Header() {
               <Button
                 variant="primary"
                 className="h-[40px] w-[91px] text-[14px]"
-                onClick={() => router.push('/signup')}
+                loadingSize="h-[16px] w-[16px]"
+                loading={loadingAuth === 'signup'}
+                disabled={isPendingAuth}
+                onClick={() => {
+                  setLoadingAuth('signup');
+                  startTransitionAuth(() => router.push('/signup'));
+                }}
               >
                 Sign up
               </Button>
