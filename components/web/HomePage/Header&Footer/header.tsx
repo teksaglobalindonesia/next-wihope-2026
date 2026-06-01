@@ -4,6 +4,7 @@ import { useEffect, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from '../perButtonan/Link';
 import Button from '../perButtonan/Button';
+import { useAuthStore } from '@/stores/use-auth-store';
 
 const LINKS = [
   { name: 'home', label: 'Home', href: '/' },
@@ -20,6 +21,8 @@ export default function Header() {
   const [loadingAuth, setLoadingAuth] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
   const [isPendingAuth, startTransitionAuth] = useTransition();
+  const name = useAuthStore((state) => state.name);
+  const clearName = useAuthStore((state) => state.clearName);
 
   const handleClick = (linkName: string, href: string) => {
     if (isPending) return;
@@ -27,6 +30,13 @@ export default function Header() {
     startTransition(() => {
       router.push(href);
     });
+  };
+
+  const handleLogout = () => {
+    if (!confirm('Yakin ingin logout?')) return;
+
+    clearName();
+    router.push('/');
   };
 
   useEffect(() => {
@@ -42,7 +52,7 @@ export default function Header() {
   }, [isPendingAuth, loadingAuth]);
 
   return (
-    <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-center bg-neutral-silver">
+    <div className="fixed left-0 right-0 top-0 z-50 flex h-[84px] w-full items-center justify-center bg-neutral-silver font-inter">
       <div className="flex w-[1215px] justify-between">
         <div className="flex items-center justify-center gap-[8px]">
           <img className="h-[24px] w-[35px]" src="/logo.png" alt="logo" />
@@ -64,33 +74,45 @@ export default function Header() {
           ))}
         </div>
         <div className="flex items-center justify-center gap-[14px]">
-          <Button
-            variant="tertiary"
-            className="h-[40px] w-[77px] text-[14px]"
-            loadingSize="h-[14px] w-[14px]"
-            loading={loadingAuth === 'login'}
-            disabled={isPendingAuth && loadingAuth !== 'login'}
-            onClick={() => {
-              setLoadingAuth('login');
-              startTransitionAuth(() => router.push('/test'));
-            }}
-          >
-            Login
-          </Button>
+          {name ? (
+            <>
+              <Button
+                variant="tertiary"
+                className="mr-[20px] flex h-fit w-fit items-center justify-center text-[14px] font-bold leading-[20px] text-brand-primary underline [text-decoration-skip-ink:none] underline-offset-[3.2px]"
+                onClick={() => router.push('/profile')}
+              >
+                {name}
+              </Button>
 
-          <Button
-            variant="primary"
-            className="h-[40px] w-[91px] text-[14px]"
-            loadingSize="h-[14px] w-[14px]"
-            loading={loadingAuth === 'signup'}
-            disabled={isPendingAuth && loadingAuth !== 'signup'}
-            onClick={() => {
-              setLoadingAuth('signup');
-              startTransitionAuth(() => router.push('/test'));
-            }}
-          >
-            Sign up
-          </Button>
+              <Button
+                variant="tertiary"
+                className="h-fit w-fit text-[14px] font-medium leading-[20px] text-neutral-black underline [text-decoration-skip-ink:none] underline-offset-[3.2px]"
+                onClick={() => {
+                  handleLogout();
+                }}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                variant="tertiary"
+                className="h-[40px] w-[77px] text-[14px]"
+                onClick={() => router.push('/login')}
+              >
+                Login
+              </Button>
+
+              <Button
+                variant="primary"
+                className="h-[40px] w-[91px] text-[14px]"
+                onClick={() => router.push('/signup')}
+              >
+                Sign up
+              </Button>
+            </>
+          )}
         </div>
       </div>
     </div>
