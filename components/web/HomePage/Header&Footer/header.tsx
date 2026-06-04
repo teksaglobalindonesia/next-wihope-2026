@@ -12,7 +12,8 @@ const LINKS = [
   { name: 'feature', label: 'Feature', href: '/feature' },
   { name: 'product', label: 'Product', href: '/product' },
   { name: 'testimonial', label: 'Testimonial', href: '/testimonial' },
-  { name: 'faq', label: 'FAQ', href: '/faq' }
+  { name: 'faq', label: 'FAQ', href: '/faq' },
+  { name: 'cart', label: 'Cart', href: '/cart' }
 ];
 
 export default function Header() {
