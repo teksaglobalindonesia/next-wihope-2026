@@ -45,7 +45,7 @@ export default function Header() {
         </p>
       </div>
 
-      <div className="flex h-[24px] w-[588px] items-center gap-[50px] font-inter text-[16px] font-medium">
+      <div className="flex h-[24px] items-center gap-[50px] font-inter text-[16px] font-medium">
         <NavLink
           href="/"
           onClick={() => handleClick('home')}
@@ -98,6 +98,15 @@ export default function Header() {
           disabled={loadingLink !== null && loadingLink !== 'faq'}
         >
           FAQ
+        </NavLink>
+
+        <NavLink
+          href="/"
+          onClick={() => handleClick('cart')}
+          active={loadingLink === 'cart'}
+          disabled={loadingLink !== null && loadingLink !== 'cart'}
+        >
+          Cart
         </NavLink>
       </div>
 
