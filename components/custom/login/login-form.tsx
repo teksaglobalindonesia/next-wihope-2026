@@ -3,6 +3,7 @@
 import { useAuthStore } from '@/stores/use-auth-store';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { toast } from 'sonner';
 
 export default function LoginForm() {
   const {setUser} = useAuthStore();
@@ -30,6 +31,7 @@ export default function LoginForm() {
     });
 
     router.push('/profile');
+    toast.success("Login Successful!", { position: "top-right" });
   }
     
   return (

@@ -7,9 +7,12 @@ import { useAuthStore } from '@/stores/use-auth-store';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { NavLinks } from '@/lib/data-dummy';
+import { toast } from 'sonner';
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from '@radix-ui/react-alert-dialog';
+import { AlertDialogHeader, AlertDialogFooter } from '../ui/alert-dialog';
 
 export default function Header() {
-  const {user, clearState} = useAuthStore();
+  const { user, clearState } = useAuthStore();
   const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
 
@@ -20,7 +23,8 @@ export default function Header() {
   const handleLogout = () => {
     clearState();
     router.push('/');
-  }
+    toast.success("Logout Successful!");
+  };
 
   return (
     <>
@@ -56,14 +60,35 @@ export default function Header() {
               <Link href="/profile">{user.name}</Link>
             </Button>
 
-            <Button
-              className="rounded-[6px] px-5 py-[10px]"
-              variant="standardPrimary"
-              size="clear"
-              asChild
-            >
-              <button onClick={handleLogout}>Logout</button>
-            </Button>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button
+                  className="rounded-[6px] px-5 py-[10px]"
+                  variant="standardPrimary"
+                  size="clear"
+                  asChild
+                >
+                  <button onClick={handleLogout}>Logout</button>
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Logout</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Are you sure you want to logout from your account?
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction
+                    onClick={handleLogout}
+                    className="bg-red-500 hover:bg-red-600"
+                  >
+                    Logout
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </nav>
         ) : (
           <nav className="flex items-center gap-[14px] text-sm">

@@ -92,6 +92,8 @@ export const NavLinks = [
     {id: "product",     label: "Product",       href: "/product"    },
     {id: "testimonial", label: "Testimonial",   href: "/testimonial"},
     {id: "faq",         label: "FAQ",           href: "/faq"        },
+    {id: "cart",        label: "Cart",          href: "/cart"       },
+
 ]
 
 export const Services = [

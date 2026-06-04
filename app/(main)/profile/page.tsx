@@ -1,9 +1,9 @@
-import Profile from "@/components/custom/profile/profile";
+import Profile from '@/components/custom/profile/profile';
 
-export default function page() {
-    return (
-        <>
-            <Profile/>
-        </>
-    )
+export default function ProfilePage() {
+  return (
+    <>
+      <Profile />
+    </>
+  );
 }
