@@ -25,36 +25,47 @@ export default function Header() {
           >
             Home
           </Link>
+
           <Link
             href="/services"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Services
           </Link>
+
           <Link
             href="/features"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Features
           </Link>
+          
           <Link
             href="/product"
             className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
           >
             Product
           </Link>
+
           <Link
             href="/testimonials"
-            className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
-          >
+            className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary">
             Testimonials
           </Link>
+
           <Link
             href="/faq"
-            className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
-          >
+            className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary">
             FAQ
           </Link>
+
+          <Link
+            href="/cart"
+            className="transition-all duration-300 hover:text-brand-primary hover:underline hover:decoration-brand-primary"
+          >
+            Cart
+          </Link>
+
         </nav>
         {name ? (
           <div className="flex items-center gap-4">

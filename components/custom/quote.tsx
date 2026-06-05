@@ -38,7 +38,7 @@ const Logo = [
               src={logo}
               width={40}
               height={40}
-              className="hover:bg-[#5417D7] hover:scale-[1.025] transition-all duration-200"
+              className="hover:scale-[1.5] transition-all duration-200"
             />
           ))}
 <button className="w-[223px] h-[44px] p-[8px] text-brand-primary font-inter font-semibold text-[20px] leading-[28px] text-center">Meet all customers →</button>
