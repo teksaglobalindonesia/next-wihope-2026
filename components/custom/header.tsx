@@ -19,12 +19,13 @@ export default function Header() {
   };
 
   const menus = [
-    "Home",
-    "Service",
-    "Feature",
-    "Product",
-    "Testimonial",
-    "FAQ",
+    { name: "Home", href: "/" },
+    { name: "Service", href: "/service" },
+    { name: "Feature", href: "/feature" },
+    { name: "Product", href: "/product" },
+    { name: "Testimonial", href: "/testimonial" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Cart", href: "/cart" },
   ];
 
   return (
@@ -45,11 +46,11 @@ export default function Header() {
           <ul className="flex items-center gap-[50px]">
             {menus.map((menu) => (
               <li
-                key={menu}
+                key={menu.name}
                 className="list-none font-inter text-[16px] font-normal leading-6 text-gray-900"
               >
-                <Link href={menu === "Service" ? "/service" : "#"}>
-                  {menu}
+                <Link href={menu.href}>
+                  {menu.name}
                 </Link>
               </li>
             ))}
