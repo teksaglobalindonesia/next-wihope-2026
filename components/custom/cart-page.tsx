@@ -116,7 +116,7 @@ return (
                         <div>
                             <h3 className="text-lg font-bold text-slate-900 mb-3">Remove Item from Cart?</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">
-                            Are you sure you want to remove? <span className="block font-medium text-slate-800">"{selectedProduct?.title}&quot;</span></p>
+                            Are you sure you want to remove? <span className="block font-medium text-slate-800">&quot;{selectedProduct?.title}&quot;</span></p>
                         </div>
 
                         {/* Aksi Tombol (Batal vs Konfirmasi) */}
