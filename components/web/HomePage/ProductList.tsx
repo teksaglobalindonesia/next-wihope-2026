@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useTransition, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Button from './perButtonan/Button';
 import { useCartStore } from '@/stores/use-cart-store';
 type Product = {
@@ -14,8 +13,6 @@ type Product = {
 
 export default function ProductList() {
   const [filtered, setFiltered] = useState<Product[]>([]);
-  const [loadingId, setLoadingId] = useState<number | null>(null);
-  const [isPending, startTransition] = useTransition();
   const [counts, setCounts] = useState<Record<number, number>>({});
   const addToCart = useCartStore((state: any) => state.addToCart);
   useEffect(() => {
@@ -87,15 +84,11 @@ export default function ProductList() {
               <Button
                 variant="primary"
                 className="h-full w-[153px] text-[14px]"
-                loadingSize="h-[16px] w-[16px]"
-                loading={loadingId === item.id}
-                disabled={isPending}
                 onClick={() => {
-                  setLoadingId(item.id);
-                  setLoadingId(null);
                   addToCart({
                     id: item.id,
                     title: item.title,
+                    image: item.image,
                     price: item.price,
                     quantity: counts[item.id] ?? 1
                   });
