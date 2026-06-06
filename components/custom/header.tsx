@@ -5,9 +5,11 @@ import { useRouter } from 'next/navigation';
 import NavLink from '../Function/navlink';
 import Button from '../Function/button';
 import { useAuthStore } from '@/stores/use-auth-store';
+import { useCartStore } from '@/stores/use-cart-store';
 
 export default function Header() {
   const [loadingLink, setLoadingLink] = useState<string | null>(null);
+  const { cart } = useCartStore();
 
   const handleClick = (linkName: string) => {
     setLoadingLink(linkName);
@@ -74,7 +76,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/product"
           onClick={() => handleClick('product')}
           active={loadingLink === 'product'}
           disabled={loadingLink !== null && loadingLink !== 'product'}
@@ -101,12 +103,19 @@ export default function Header() {
         </NavLink>
 
         <NavLink
-          href="/"
+          href="/cart"
           onClick={() => handleClick('cart')}
           active={loadingLink === 'cart'}
           disabled={loadingLink !== null && loadingLink !== 'cart'}
         >
-          Cart
+          <div className="relative">
+            Cart
+            {cart.length > 0 && (
+              <span className="absolute -right-5 -top-2 flex size-5 items-center justify-center rounded-full bg-brand-primary text-xs text-white">
+                {cart.reduce((total, item) => total + item.quantity, 0)}
+              </span>
+            )}
+          </div>
         </NavLink>
       </div>
 
@@ -140,13 +149,19 @@ export default function Header() {
               loading={loadingButton === 'profile'}
               disabled={loadingButton !== null && loadingButton !== 'profile'}
               onClick={() => handleButtonClick('profile', '/profile')}
-              iconPosition='left'
-              icon={<img src="/Icon-images/Sukuna.jpg" alt="" className="size-[30px] rounded-full"/>}
+              iconPosition="left"
+              icon={
+                <img
+                  src="/Icon-images/Sukuna.jpg"
+                  alt=""
+                  className="size-[30px] rounded-full"
+                />
+              }
             >
-              {username.slice(0,6)}
+              {username.slice(0, 6)}
             </Button>
             <Button
-              className="h-[40px] w-[91px] rounded-[6px] text-[14px] underline underline-offset-2 decoration-brand-primary"
+              className="h-[40px] w-[91px] rounded-[6px] text-[14px] underline decoration-brand-primary underline-offset-2"
               variant="Tertiary"
               loading={loadingButton === 'logout'}
               disabled={loadingButton !== null && loadingButton !== 'logout'}

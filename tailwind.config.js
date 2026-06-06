@@ -49,7 +49,7 @@ module.exports = {
         'tint-tint_4': 'var(--tint-tint_4)',
         'tint-tint_5': 'var(--tint-tint_5)',
         'action-warning': 'var(--action-warning)',
-        'action-error': 'var(--action-warning)',
+        'action-error': 'var(--action-error)',
         'action-success': 'var(--action-success)',
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
