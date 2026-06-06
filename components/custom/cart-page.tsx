@@ -35,7 +35,7 @@ export default function CartPage() {
 
     if (cartItems.length === 0) {
         return (
-            <div className="w-full mt-[120px] text-center font-semibold text-red-500">
+            <div className="w-full h-auto flex items-center justify-center  mt-[120px] mb-4 text-center font-semibold text-red-500">
                 Keranjang belanja Anda kosong.
             </div>
         );
@@ -116,12 +116,12 @@ return (
                         <div>
                             <h3 className="text-lg font-bold text-slate-900 mb-3">Remove Item from Cart?</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">
-                            Are you sure you want to remove? <span className="block font-medium text-slate-800">"{selectedProduct?.title}"</span></p>
+                            Are you sure you want to remove? <span className="block font-medium text-slate-800">"{selectedProduct?.title}&quot;</span></p>
                         </div>
 
                         {/* Aksi Tombol (Batal vs Konfirmasi) */}
                         <div className="flex justify-end gap-3 mt-2">
-                            <CustButton
+                            <CustButton 
                                 variant={'secondary2'}
                                 size={'long'}
                                 onClick={() => setIsModalOpen(false)}
