@@ -1,6 +1,6 @@
 export default function Community(){
     return(
-        <div className="w-full h-[416px] gap-[16px] mt-14">
+        <div className="w-full max-w-7xl h-auto mx-auto gap-[16px] mt-14">
             <div className="flex flex-col items-center text-center">
                 <h1 className="font-inter w-[542px] h-[88px] font-semibold text-[36px] leading-[44px] ">Manage your entire community in a single system</h1>
                 <p className="mt-2 text-[#717171]">Who is Nextcent suitable for?</p>

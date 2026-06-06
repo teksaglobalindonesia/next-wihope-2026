@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton"
 
 export default function Quote() {
     return(
-        <div className="flex flex-row w-full h-[390px] px-36 py-8 gap-[78px] bg-[#F5F7FA]">
+        <div className="flex flex-row w-full max-w-7xl h-[390px] mx-auto px-36 py-8 gap-[78px] bg-[#F5F7FA]">
             <img src="/image/image 9.png" alt="" />
 
             <div className="flex flex-col w-[748px] h-[324px]">

@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton";
 
 export default function Footer() {
     return (
-        <div className="h-[328px] w-full bg-[#263238] px-[165px] py-16 ">
+        <div className="max-w-7xl h-auto mx-auto w-full bg-[#263238] px-[165px] py-16 ">
             <div className="flex flex-row gap-32">
                 <div className="flex h-[189.67px] w-[350px] flex-col gap-10 ">
                     <div className="flex h-[24px] w-[154.49px] flex-row items-center gap-1">

@@ -1,6 +1,6 @@
 export default function Achievement() {
     return(
-        <div className="flex flex-row justify-between items-center my-12 w-full h-[288px] px-[144px] py-[64px] bg-[#F5F7FA]">
+        <div className="max-w-7xl h-auto mx-auto flex flex-row justify-between items-center my-12 w-full px-[144px] py-[64px] bg-[#F5F7FA]">
             <div className="w-[540px] h-[120px] gap-2 text-start font-inter">
                 <h1 className="w-[408px] h-[88px] font-semibold text-3xl text-[#4D4D4D]">Helping a local 
                     <span className="block text-brand-primary"> business reinvent itself</span>

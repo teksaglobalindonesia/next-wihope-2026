@@ -20,7 +20,7 @@ export default function Login () {
     }
 
     return(
-        <div className="w-full h-[245px] mt-[84px] mb-[355px] gap-10 py-6 font-inter">
+        <div className="w-full max-w-7xl h-auto mx-auto mt-[84px] mb-[355px] gap-10 py-6 font-inter">
             <div className="w-full h-[197px]">
                 <div className="px-[144px] gap-[96px]">
                     <div className="flex flex-col w-[661px] gap-4">

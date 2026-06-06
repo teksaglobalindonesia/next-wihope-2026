@@ -21,7 +21,7 @@ export const useAuthStore = create<AuthState>()(
             clearName: () => set({ name: '', isLoggedin: false }),
         }),
         {
-            name: 'auth-storage', // Ini nama key yang akan tersimpan di LocalStorage browser kamu
+            name: 'auth-storage',
         }
     )
 );

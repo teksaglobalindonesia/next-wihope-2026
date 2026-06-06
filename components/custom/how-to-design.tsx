@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton";
 
 export default function HowToDesign() {
     return(
-        <div className="w-full h-[433.4px] my-12 px-[120px] ">
+        <div className="w-full max-w-7xl h-auto mx-auto my-12 px-[120px] ">
             <div className="flex flex-row gap-7 items-center">
                 <img src="/image/pana new.png" alt="image" className="w-[441.53px] h-[433.4px]" />
                     

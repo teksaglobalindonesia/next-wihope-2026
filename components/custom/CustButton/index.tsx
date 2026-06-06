@@ -14,12 +14,16 @@ const buttonVariants = cva(
         header:'bg-transparent text-gray-900 hover:scale-105 hover:underline transition duration-300 ease-in-out ',
         footer:'bg-transparent text-white hover:scale-105 hover:underline transition duration-300 ease-in-out',
         secondary2:'bg-transparent text-black hover:scale-105 hover:underline transition duration-300 ease-in-out ',
+        secondary3:'bg-transparent text-red-500 border border-transparent hover:border-red-500 hover:scale-105 hover:underline transition duration-300 ease-in-out ',
+        Quantity:'bg-[#89939E] text-white border border-transparent hover:border-gray-800 transition duration-300 ease-in-out ',
+        Danger:'bg-red-500 hover:bg-red-600 text-white border border-transparent hover:border-red-700 hover:underline transition duration-300 ease-in-out '
       },
       size: {
         normal: 'w-[135px] h-[50px] text-lg flex items-center whitespace-nowrap',
         medium: 'w-[91px] h-[40px] text-sm flex items-center whitespace-nowrap',
         footer: 'w-[91px] h-[40px] text-sm text-start flex items-center justify-start whitespace-nowrap',
-        long: 'h-[40px] px-4 text-sm flex items-center whitespace-nowrap'
+        long: 'h-[40px] px-4 text-sm flex items-center whitespace-nowrap',
+        Round: 'w-[40px] h-[40px] p-0 rounded-full flex items-center justify-center text-lg'
       }
       
     },

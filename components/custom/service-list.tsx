@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton"
 
 export default function ServiceList() {
     return(
-        <div className="w-full gap-4">
+        <div className="w-full max-w-7xl h-auto mx-auto gap-4">
             <div className="w-full h-[433px] pl-[144px] mt-[42px]">
                 <div className="flex justify-between flex-row items-center">
                     <div className="w-[368px] h-[433px] flex items-center">

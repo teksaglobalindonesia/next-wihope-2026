@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton";
 
 export default function Hero() {
     return(
-        <div className="flex flex-row items-center w-full h-[599px] bg-[#F5F7FA] px-[144px] py-[96px] ">
+        <div className="flex flex-row items-center w-full max-w-7xl h-auto mx-auto bg-[#F5F7FA] px-[144px] py-[96px] ">
             <div className="max-w-[657px] gap-[16px] mr-4">
                 <h3 className="w-[657px]  font-inter font-semibold text-[60px] leading-[76px] text-neutral-d-grey">Lessons and insights  
                     <span className="block text-brand-primary">from 8 years</span>

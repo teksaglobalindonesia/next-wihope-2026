@@ -2,7 +2,7 @@ import { CustButton } from "./CustButton";
 
 export default function UnseenSpending() {
     return(
-        <div className="w-full h-[433px] pl-[144px] mt-[42px]">
+        <div className="w-full max-w-7xl h-auto mx-auto pl-[144px] mt-[42px]">
             <div className="flex flex-row items-center">
                 <img src="/image/Frame 35 new2.png" alt="image" className="w-[441] h-[328.99px] mt-[52px]" />
                     

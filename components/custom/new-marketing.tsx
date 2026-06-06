@@ -2,7 +2,7 @@ import { CustButton } from './CustButton';
 
 export default function NewMarketing() {
   return (
-    <div className='flex flex-col items-center w-full h-[506px] gap-4 font-inter'>
+    <div className='flex flex-col items-center w-full max-w-7xl h-auto mx-auto gap-4 font-inter'>
       <div className='flex flex-col items-center w-[1110px] h-[124px] gap-2'>
         <h1 className='font-semibold text-4xl leading-[44px] text-[#4D4D4D] '>Caring is the new marketing</h1>
         <p className='text-center w-[628px] h-[72px] '>{"The Nexcent blog is the best place to read about the latest membership insights, trends and more. See who's joining the community, read about how our community are increasing their membership income and lot's more."}</p>
