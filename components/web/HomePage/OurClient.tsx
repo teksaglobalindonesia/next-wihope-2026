@@ -10,7 +10,8 @@ export default function OurClient() {
 useEffect(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      start: 'top -40%',
+      trigger: '.container',
+      start: 'top 70%',
       toggleActions: 'play none none none',
     },
   });
@@ -31,7 +32,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="flex h-[190px] flex-col items-center justify-between">
+    <div className="flex h-[190px] flex-col items-center justify-between container">
       <div className="flex flex-col gap-[8px] font-inter">
         <p className="title text-center text-[36px] font-semibold leading-[44px] text-neutral-d_grey ">
           Our Client

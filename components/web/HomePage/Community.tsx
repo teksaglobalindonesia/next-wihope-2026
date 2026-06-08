@@ -9,7 +9,8 @@ export default function Community() {
 useEffect(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      start: 'top -120%',
+      trigger: '.container',
+      start: 'top -10%',
       toggleActions: 'play none none none',
     },
   });
@@ -19,7 +20,7 @@ useEffect(() => {
   tl.from('.card3', {rotate: 30, duration: 0.5 })
 }, []);
   return (
-    <div className="flex flex-col items-center font-inter">
+    <div className="flex flex-col items-center font-inter container">
       <div className="flex flex-col gap-[8px]">
         <p className="text-center text-[36px] font-semibold leading-[44px] text-neutral-d_grey ">
           Manage your entire community
