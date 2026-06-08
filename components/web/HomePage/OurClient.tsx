@@ -10,7 +10,6 @@ export default function OurClient() {
 useEffect(() => {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: '.container',
       start: 'top -40%',
       toggleActions: 'play none none none',
     },
