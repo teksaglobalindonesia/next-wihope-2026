@@ -1,4 +1,45 @@
+'use client'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Community(){
+    const cardsRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+    const container = cardsRef.current;
+    if (!container) return;
+
+    const cards = Array.from(container.children) as HTMLElement[];
+
+    gsap.set(cards, {
+        y: 0,
+        rotation: 25,
+        transformOrigin: "center center",
+    });
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: container,
+        start: "top 80%",
+        end: "top 50%",
+        toggleActions: "play none none none",
+        },
+    });
+
+    cards.forEach((card) => {
+        tl.to(card, {
+        y: 0,
+        rotation: 0,
+        duration: 1,
+        ease: "power1.out", 
+        });
+    });
+}, []);
+
+
     return(
         <div className="w-full max-w-7xl h-auto mx-auto gap-[16px] mt-14">
             <div className="flex flex-col items-center text-center">
@@ -6,7 +47,7 @@ export default function Community(){
                 <p className="mt-2 text-[#717171]">Who is Nextcent suitable for?</p>
             </div>
             
-            <div className="flex flex-row justify-between items-center text-center gap-2 px-[100px] mt-8">
+            <div ref={cardsRef} className="flex flex-row justify-between items-center text-center gap-2 px-[100px] mt-8">
                 <div className="flex flex-col cursor-pointer hover:scale-105 transition duration-300 ease-in-out w-[299px] h-[260px] items-center rounded-lg shadow-md px-[32px] py-[24px]">
                     <img className="w-[65px] h-[56px]" src="/comunity-logo/Icon member new.png" alt="member1" />
                         <h1 className="font-inter font-bold text-xl text-neutral-d-grey"> Membership Organisations </h1>

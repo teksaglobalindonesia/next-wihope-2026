@@ -1,9 +1,23 @@
+'use client'
+
+import { useEffect } from "react";
 import { CustButton } from "./CustButton";
+import gsap from "gsap";
 
 export default function Hero() {
+    
+    useEffect(() => {
+        gsap.from('.hero', {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            ease: "power1.out",
+        });
+    }, []);
+
     return(
         <div className="flex flex-row items-center w-full max-w-7xl h-auto mx-auto bg-[#F5F7FA] px-[144px] py-[96px] ">
-            <div className="max-w-[657px] gap-[16px] mr-4">
+            <div className="hero max-w-[657px] gap-[16px] mr-4">
                 <h3 className="w-[657px]  font-inter font-semibold text-[60px] leading-[76px] text-neutral-d-grey">Lessons and insights  
                     <span className="block text-brand-primary">from 8 years</span>
                 </h3>   
