@@ -10,7 +10,7 @@ export default function UnseenSpending() {
     const descRef=useRef(null);
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const handlePictureAnimation = () => {
+    const handleAnimation = () => {
         if (!isExpanded) {
             // Expand
             gsap.to(pictRef.current, {
@@ -70,7 +70,7 @@ export default function UnseenSpending() {
                             <p ref={descRef} className="font-inter mt-4 text-sm text-[#717171]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet justo ipsum. Sed accumsan quam vitae est varius fringilla. Pellentesque placerat vestibulum lorem sed porta. Nullam mattis tristique iaculis. Nullam pulvinar sit amet risus pretium auctor. Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec elementum pulvinar odio.</p>
                         </div>
                         
-                        <CustButton onClick={handlePictureAnimation}>Learn More</CustButton>
+                        <CustButton onClick={handleAnimation}>Learn More</CustButton>
                     </div>
             </div>
         </div>
