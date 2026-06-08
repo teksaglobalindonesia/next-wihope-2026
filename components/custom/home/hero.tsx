@@ -18,7 +18,7 @@ export default function Hero() {
       y: 50, opacity: 0, duration: 1, ease: 'power2.out',
       scrollTrigger: {
         trigger: '.hero-container',
-        markers: true,
+        // markers: true,
         start: "top 80%",
       }
     })
