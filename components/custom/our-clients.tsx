@@ -39,8 +39,8 @@ export default function OurClients() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: containerRef.current,
-                start: "top 85%",
-                end: "top 55%",
+                start: "top 75%",
+                end: "top 45%",
                 markers: false,
                 toggleActions: "play none none none"
             }
