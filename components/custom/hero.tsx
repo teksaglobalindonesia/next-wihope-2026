@@ -1,6 +1,6 @@
 "use client";
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import {gsap} from 'gsap';
 import Button from '../Function/button';
 
 export default function Hero() {
@@ -14,11 +14,19 @@ export default function Hero() {
     }, 2000);
   };
 
+  useEffect(() => {
+    gsap.from('.hero', {
+      y:200,
+      opacity:0,
+      duration:1.5
+    });
+  }, [])
+
   return (
     <div className="flex h-[599px] w-full gap-[40px] bg-neutral-silver px-[50px] py-[96px] justify-center">
-      <div className="ml-[35px] mt-[65.5px] flex flex-col font-inter">
+      <div className="hero ml-[35px] mt-[65.5px] flex flex-col font-inter">
         <p className="w-[724px] text-[64px] font-semibold text-neutral-d_grey leading-[78px]">
-          Lessons and insights <br />
+          Lessons and insights <br/>
           <span className="text-brand-primary">from 8 years</span>
         </p>
         <p className="mt-[16px] text-[16px] text-neutral-d_grey">
