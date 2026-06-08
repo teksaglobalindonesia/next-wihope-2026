@@ -1,9 +1,18 @@
+"use client";
+import {gsap} from "gsap";
+import {useRef, useEffect } from "react";
+
 export default function Hero() {
+
+  const heroRef = useRef(null);
+  useEffect(() => {
+    gsap.from(heroRef.current, {duration:2.5, opacity : 0, y : 100});
+  }, []);
   return (
 
-    <section className=" w-full h-[599px] flex justify-center items-center  px-[144px] py-[96px] gap-[104px] bg-neutral-silver"> 
+    <section  className=" w-full h-[599px] flex justify-center items-center  px-[144px] py-[96px] gap-[104px] bg-neutral-silver"> 
 
-      <div className=" flex flex-col w-[657px] h-[276px] gap-[32px] justify-center">
+      <div ref={heroRef} className=" flex flex-col w-[657px] h-[276px] gap-[32px] justify-center">
 
         <div className="flex flex-col gap-4">
           <h1 className="font-inter text-[64px] font-semibold leading-[76px] text-neutral-d-grey">
