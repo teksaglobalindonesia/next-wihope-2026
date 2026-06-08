@@ -1,3 +1,9 @@
+'use client';
+
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const communities = [
   {
     title: "Membership Organisations",
@@ -17,8 +23,25 @@ const communities = [
 ];
 
 export default function Community() {
+
+  useEffect(() => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from('.community-card', {
+    y: 20,
+    rotation: 25,
+    duration: 2,
+    stagger: 0.5,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: '.community-card',
+      start: 'top 80%',
+    },
+  });
+}, []);
+
   return (
-    <section className="w-full bg-white">
+    <section className="community-section w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-[144px] py-[40px]">
         
         <div className="w-full flex flex-col items-center">
@@ -41,7 +64,7 @@ export default function Community() {
             {communities.map((item, index) => (
               <div
                 key={index}
-                className="w-[299px] h-[260px] bg-neutral-white rounded-[8px] px-[32px] py-[24px] flex flex-col items-center gap-[8px] shadow-[0px_2px_4px_0px_#ABBED133]"
+                className="community-card w-[299px] h-[260px] bg-neutral-white rounded-[8px] px-[32px] py-[24px] flex flex-col items-center gap-[8px] shadow-[0px_2px_4px_0px_#ABBED133]"
               >
                 <img
                   src={item.icon}
