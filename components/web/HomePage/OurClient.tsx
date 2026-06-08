@@ -12,7 +12,6 @@ useEffect(() => {
     scrollTrigger: {
       trigger: '.container',
       start: 'top -40%',
-      markers: true,
       toggleActions: 'play none none none',
     },
   });

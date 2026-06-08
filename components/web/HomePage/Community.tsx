@@ -1,4 +1,24 @@
+'use client';
+
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 export default function Community() {
+useEffect(() => {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.container',
+      start: 'top -120%',
+      toggleActions: 'play none none none',
+    },
+  });
+
+  tl.from('.card1', {rotate: 30, duration: 0.5 })
+  tl.from('.card2', {rotate: 30, duration: 0.5 })
+  tl.from('.card3', {rotate: 30, duration: 0.5 })
+}, []);
   return (
     <div className="flex flex-col items-center font-inter">
       <div className="flex flex-col gap-[8px]">
@@ -12,7 +32,7 @@ export default function Community() {
         </p>
       </div>
       <div className="mt-[16px] flex w-[1152px] items-center justify-between">
-        <div className="flex h-[260px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
+        <div className="card1 flex h-[260px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
           <img
             className="mb-[16px] h-[56px] w-[65px]"
             src="/Community1.png"
@@ -28,7 +48,7 @@ export default function Community() {
             membership renewals and payments
           </p>
         </div>
-        <div className="flex h-[280px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
+        <div className="card2 flex h-[280px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
           <img
             className="mb-[16px] h-[56px] w-[65px]"
             src="/Community2.png"
@@ -46,7 +66,7 @@ export default function Community() {
             payments
           </p>
         </div>
-        <div className="flex h-[260px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
+        <div className="card3 flex h-[260px] w-[299px] flex-col items-center justify-center rounded-[8px] p-[24px] shadow-[0_2px_4px_0_rgba(171,190,209,0.2)]">
           <img
             className="mb-[16px] h-[56px] w-[65px]"
             src="/Community3.png"
