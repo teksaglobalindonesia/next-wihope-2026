@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState, useTransition, useEffect } from 'react';
+import { gsap } from 'gsap';
 import { useRouter } from 'next/navigation';
 import Button from './perButtonan/Button';
 
@@ -8,11 +9,19 @@ export default function Hero() {
   const router = useRouter();
   const [loading, setLoading] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
+  
+  useEffect(() => {
+    gsap.from('.heroLeft', {
+      y: 200,
+      opacity: 0,
+      duration: 1
+    });
+  }, []);
 
   return (
     <div className="mt-[84px] flex h-[599px] justify-center bg-neutral-silver">
       <div className="flex h-full w-[1152px] items-center justify-between">
-        <div className="flex flex-col gap-[32px]">
+        <div className="heroLeft flex flex-col gap-[32px]">
           <div className="flex h-[152px] flex-col">
             <div className="font-inter text-[64px] font-semibold leading-[76px]">
               <p className="text-neutral-d_grey">Lessons and insights</p>
