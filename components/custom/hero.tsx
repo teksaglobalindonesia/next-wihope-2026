@@ -10,7 +10,7 @@ export default function Hero() {
   }, []);
   return (
 
-    <section  className=" w-full h-[599px] flex justify-center items-center  px-[144px] py-[96px] gap-[104px] bg-neutral-silver"> 
+    <section  className=" mt-[84px] w-full h-[599px] flex justify-center items-center  px-[144px] py-[96px] gap-[104px] bg-neutral-silver"> 
 
       <div ref={heroRef} className=" flex flex-col w-[657px] h-[276px] gap-[32px] justify-center">
 

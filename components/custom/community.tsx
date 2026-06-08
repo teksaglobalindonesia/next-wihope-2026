@@ -1,3 +1,9 @@
+'use client';
+import { gsap } from 'gsap';
+import { useRef, useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Community() {
   const community = [
     {
@@ -28,8 +34,42 @@ export default function Community() {
       descHeight: 'h-[60px]'
     }
   ];
+
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.community-section',
+        start: 'top 80%',
+        toggleActions: 'play none none none'
+      }
+    });
+
+    tl.from('.card-1', {
+      rotation: 15,
+      duration: 1
+    })
+      .from(
+        '.card-2',
+        {
+          rotation: 15,
+          duration: 1
+        },
+        '-=0.5'
+      )
+      .from(
+        '.card-3',
+        {
+          rotation: 15,
+          duration: 1
+        },
+        '-=0.5'
+      );
+  }, []);
+
   return (
-    <div className="w-full bg-white">
+    <div ref={sectionRef} className="community-section w-full bg-white">
       <div className="mx-auto mt-10 flex h-[416px] max-w-[1440px] flex-col items-center gap-[16px]">
         <div className="flex h-[120px] flex-col items-center gap-[8px]">
           <h2 className="font-inter w-[542px] text-center text-[36px] font-semibold leading-[44px] text-neutral-d-grey">
@@ -40,11 +80,11 @@ export default function Community() {
           </p>
         </div>
 
-        <div className="flex w-full justify-between px-[144px] ">
+        <div className=" flex w-full justify-between px-[144px] ">
           {community.map((community, index) => (
             <div
               key={index}
-              className="flex h-[260px] w-[299px] flex-col items-center gap-[8px] rounded-[8px] px-[32px] py-[24px] shadow-[0px_2px_4px_0px_#ABBED133] hover:scale-105 transition-all duration-300"
+              className={`card-${index + 1} flex h-[260px] w-[299px] flex-col items-center gap-[8px] rounded-[8px] px-[32px] py-[24px] shadow-[0px_2px_4px_0px_#ABBED133]`}
             >
               <img
                 src={community.image}
