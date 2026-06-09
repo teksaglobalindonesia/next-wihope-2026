@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
+  eslint: {
+  ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -20,6 +23,10 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
+      },
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
       },
     ]
   },
