@@ -1,4 +1,4 @@
-import Hero from '@/components/custom/hero';
+
 import Header from '@/components/custom/header';
 import OurClients from '@/components/custom/our-clients';
 import Community from '@/components/custom/community';
@@ -8,6 +8,7 @@ import HowToDesign from '@/components/custom/how-to-design';
 import NewMarketing from '@/components/custom/new-marketing';
 import Ribbon from '@/components/custom/ribbon';
 import Footer from '@/components/custom/footer';
+import Hero from '@/components/custom/Hero';
 
 
 export default function Page() {
